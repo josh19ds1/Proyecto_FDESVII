@@ -12,6 +12,6 @@
              <h1>PROBANDO INDEX</h1>
 
     
-
+        <?php include("view/secciones1/footer.php") ?>
 </body>
 </html>
