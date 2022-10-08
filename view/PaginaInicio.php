@@ -7,12 +7,11 @@
 
 </head>
 <body>
+        <?php include("view/secciones1/header.php")?>
 
-        <h1>PROBANDO INDEX</h1>
-
-        <form action="./Index.php?opc=#"></form>
-
+             <h1>PROBANDO INDEX</h1>
 
     
+
 </body>
 </html>
