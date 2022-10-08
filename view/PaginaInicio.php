@@ -9,6 +9,10 @@
 <body>
 
         <h1>PROBANDO INDEX</h1>
+
+        <form action="./Index.php?opc=#"></form>
+
+
     
 </body>
 </html>

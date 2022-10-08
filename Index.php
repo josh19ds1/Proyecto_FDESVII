@@ -7,10 +7,10 @@
 
 // Metodo donde llevara a la demás páginas
 
-require("controller/Controler.php");
+require('controller/Controler.php');
 
-$controlador = new Controler;
-//Decido la ruta en función de los elementos del array
+$control = new controlador;
+
 if (isset($_GET['op'])){
 
     $opcion=$_GET['op'];
@@ -18,16 +18,11 @@ if (isset($_GET['op'])){
     if ($opcion=="crear")
     {
     //Llamo al método ver pasándole la clave que me están pidiendo
-    $controlador->crearUsuario();
+    $control->crearUsuario();
     }
 }
 else{
 
     //Llamo al método por defecto del controlador
-    $controlador->Index();
+    $control->index();
 }
-
-
-
-
-

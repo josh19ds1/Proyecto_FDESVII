@@ -5,7 +5,7 @@ class controlador{
 
     public function Index(){
 
-        require("view/PaginaPrincipal.php");
+        require("view/PaginaInicio.php");
     }
 
 
