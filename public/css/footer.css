@@ -1,0 +1,48 @@
+/*MENU DE FOOTER*/
+.navFar{
+ 
+        background-color:#7a1c79 ;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        align-items: center;
+        
+}
+
+
+.navFar .menu{
+        grid-column: 2/5;
+        display:grid;
+        justify-content:space-between;
+}
+
+.navFar .menu li{
+
+list-style-type: none;
+
+}
+
+.navFar .menu a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+
+}
+
+
+.inf{
+        text-align: center;
+        color: white;
+        margin-left: 15px;
+        grid-column: 6/9;
+}
+
+
+.Fot2{
+
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        max-height: 10%;
+}
