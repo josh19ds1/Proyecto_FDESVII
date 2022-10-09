@@ -2,3 +2,115 @@ body{
 background-color: #fff;
 
 }
+
+.formulario{
+
+
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(11,1fr);
+}
+
+.Boton{
+ text-decoration: none;
+ color:#fff;
+ background-color: black;
+ padding: 50px 10px;
+ margin: 5px;
+ font-size: 20px;
+ font-size: 'Kanit', sans-serif;
+ text-align: center;
+  grid-column: 1/3;
+ border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
+}
+
+.Boton2{
+    text-decoration: none;
+    color:#fff;
+    background-color: black;
+    padding: 50px 10px;
+    font-size: 20px;
+    font-size: 'Kanit', sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    grid-column:4/6;
+}
+
+.Boton3{
+    text-decoration: none;
+    color:#fff;
+    background-color: black;
+    padding: 50px 10px; 
+    margin: 5px;
+    font-size: 20px;
+    font-size: 'Kanit', sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    grid-column:7/9;
+}
+
+.Boton4{
+    text-decoration: none;
+    color:#fff;
+    background-color: black;
+    padding:  50px 10px;
+    margin: 5px;
+    font-size: 20px;
+    font-size: 'Kanit', sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    grid-column:10/12;
+}
+
+h1{
+text-align: center;
+
+}
+
+
+
+.Boton:hover {
+    background-color: rgb(61, 58, 58);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
+}
+.Boton2:hover {
+    background-color: rgb(61, 58, 58);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
+}
+.Boton3:hover {
+    background-color: rgb(61, 58, 58);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
+}
+.Boton4:hover {
+    background-color: rgb(61, 58, 58);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
+}
+
+
+
+
