@@ -17,8 +17,6 @@
 select = document.getElementById("menu");
 option = select.options[select.selectedIndex];
 document.getElementById('Rank').value = option.text;
-//document.getElementById('total').value = option.value;
-//document.getElementById('subtotal').value = option.text;
 caja = document.forms["registro"].elements;
 subtotal = Number(caja["subtotal"].value);
 
@@ -34,9 +32,6 @@ if (option.text == "Estudiante") {
   dcto = 0;
 }
 caja["descuento"].value = dcto;
-//Aqui el detalle, el numero ingresado en 'descuento', se debe dividir entre 100 para convertirlo a un valor porcentual.
-//dcto=Number(caja["descuento"].value)/100;
-//Despues simplemente multiplicas el dcto por el subtotal y lo asignas al total
 total = subtotal - (subtotal * dcto);
 caja["total"].value = total;
 }
@@ -49,9 +44,20 @@ function ComprobarClave(){
       return false;
     }
   }
+  function hish(){
+
+sh = document.getElementById("DIEEE");
+opt = sh.options[sh.selectedIndex];
+if (opt.text == "Yes/Si") {
+  document.getElementById('CIE').style.visibility = "visible";
+}else{
+  document.getElementById('CIE').style.visibility = "hidden";
+}
+}
+  
   </script>
 </head>
-<body class="text-center">
+<body class="text-center" onload="hish()">
 <main class="form-signin w-100 m-auto">
 <form id="registro" name="registro" class="form-signin" method="POST" action="" onSubmit="return ComprobarClave()">
 <img class="mb-4" src="public/images/utp.svg" alt="" width="125" height="125">
@@ -73,13 +79,17 @@ function ComprobarClave(){
         </div>
         <br>
         <div class="form-group">
-        <input type="text" class="form-control item" id="DIEEE" placeholder="Miembro IEEE" name="DIEEE" required>
-        </div>
+          <label for="DIEEE" >Es miembro del IEEEexplorer?</label>
+        <select value="" class="form-control item" name="DIEEE" id="DIEEE" onChange="hish()">
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="0" >No</option>
+        <option value="1" >Yes/Si</option>
+        </select>
+        <div class="form-group" id="CIE" style="visibility:hidden;">
         <br>
-        <div class="form-group">
         <input type="text" class="form-control item" id="CIEEE" placeholder="Miembro IEEE, Introduzca el codigo" name="CIEEE" required>
-        </div>
         <br>
+        </div>
         <div class="form-group">
         <input type="text" class="form-control item" id="Telf" placeholder="Telefono" name="Telf" required>
         </div>
@@ -146,6 +156,7 @@ function ComprobarClave(){
 <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="ComprobarClave()" value="Aceptar" >Crear Cuenta</button>
 </form>
 </main>
+<script src="../Scripts/complementos.js"></script><!-- no esta funcionandome el llamado-->
 </body>
 </html> 
 
