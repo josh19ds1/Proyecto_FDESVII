@@ -10,9 +10,11 @@
 
 
 .navFar .menu{
-        grid-column: 2/5;
+        grid-column: 1/5;
         display:grid;
         justify-content:space-between;
+        margin-left: 12%;
+        margin-top: 7%;
 }
 
 .navFar .menu li{
@@ -35,7 +37,7 @@ list-style-type: none;
         text-align: center;
         color: white;
         margin-left: 15px;
-        grid-column: 6/9;
+        grid-column: 7/9;
 }
 
 

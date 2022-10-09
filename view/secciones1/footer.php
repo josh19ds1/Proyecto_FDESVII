@@ -16,7 +16,7 @@
                                 <li><a href="#" class="menu">Nosotros</a></li>
                                 <li><a href="#" class="menu">Cronograma</a></li>
                                 <li><a href="#" class="menu">Mapa</a></li>
-                                <hr>
+
                                 <li class="inf">Integrantes: </br>
                                     José </br>
                                     Maez</br>
