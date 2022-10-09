@@ -9,4 +9,17 @@ class controlador{
     }
 
 
+    public function Registrar(){
+
+            require("view/Registro.php");
+
+    }
+
+    public function Prueba3(){
+
+        require("view/prueba3.php");
+
+    }   
+
+
 }

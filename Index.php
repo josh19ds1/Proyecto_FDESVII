@@ -11,15 +11,24 @@ require('controller/Controler.php');
 
 $control = new controlador;
 
-if (isset($_GET['op'])){
+if (isset($_GET['ops'])){
 
-    $opcion=$_GET['op'];
-
+    $opcion=$_GET['ops'];
+  
     if ($opcion=="crear")
     {
     //Llamo al método ver pasándole la clave que me están pidiendo
-    $control->crearUsuario();
+    $control->Registrar();
+    }elseif($opcion="Prueba"){
+
+            $control->Prueba3();
+
+
+    }else{
+        $control->index();
+
     }
+
 }
 else{
 

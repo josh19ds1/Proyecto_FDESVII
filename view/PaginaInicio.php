@@ -9,7 +9,14 @@
 <body>
         <?php include("view/secciones1/header.php")?>
 
-             <h1>PROBANDO INDEX</h1>
+             <h1>CONGRESO UNIVERSITARIO 2024</h1>
+             <form  method="POST" action="?ops=crear">
+
+                        <a href="?ops=prueba">prueba</a>
+                    <input type="submit" class="envio" value="enviar">
+
+             </form>
+           
 
     
         <?php include("view/secciones1/footer.php") ?>
