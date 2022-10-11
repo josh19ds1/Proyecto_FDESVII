@@ -9,7 +9,7 @@
 <title>Registro de Inscripción</title>
 
 <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
-<link href="public/css/bootstrap.min.css" rel="stylesheet">
+<link href="../public/css/bootstrap.min.css" rel="stylesheet">
 <link href="public/css/signin.css" rel="stylesheet">
 <link rel="stylesheet" href="//cdn.tutorialjinni.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="//cdn.tutorialjinni.com/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
@@ -20,37 +20,37 @@ select2 = document.getElementById("Pais");
 option2 = select2.options[select2.selectedIndex];
 select = document.getElementById("menu");
 option = select.options[select.selectedIndex];
-document.getElementById('Rank').value = option.text;
+//document.getElementById('Rank').value = option2.text;
 caja = document.forms["registro"].elements;
-subtotal = Number(caja["subtotal"].value);
-
-if (option.text == "Estudiante") {
+//subtotal = Number(caja["subtotal"].value);
+if(option.text == "Docente" && option2.value == "PA"){
+subtotal= 175;
+  dcto = 18/100;
+}else if(option.text == "Autor" && option2.value == "PA"){
+subtotal= 275;
+  dcto = 15 / 100;
+}else if(option.text == "Investigador" && option2.value == "PA"){
+  subtotal= 175;
+  dcto = 25 / 100;
+}else if(option.text == "Estudiante" && option2.value == "PA"){
+  subtotal= 125;
+  dcto = 18 / 100;
+}else if (option.text == "Estudiante") {
+  subtotal= 125;
   dcto = 15 / 100;
 } else if (option.text == "Investigador") {
+subtotal= 175;
   dcto = 20 / 100;
 } else if (option.text == "Autor") {
+subtotal= 275;
   dcto = 10 / 100;
 } else if (option.text == "Docente") {
-  dcto = 15 / 100;
-} else if(option.text == "Estudiante" && option2.value == "EX"){
-  dcto = 0;
-} else if(option.text == "Investigador" && option2.value == "EX"){
-  dcto = 0;
-}else if(option.text == "Autor" && option2.value == "EX"){
-  dcto = 0;
-}else if(option.text == "Docente" && option2.value == "EX"){
-  dcto = 0;
-}else if(option.text == "Docente" && option2.value == "PA"){
-  dcto = 15/100;
-}else if(option.text == "Autor" && option2.value == "PA"){
-  dcto = 10 / 100;
-}else if(option.text == "Investigador" && option2.value == "PA"){
-  dcto = 20 / 100;
-}else if(option.text == "Estudiante" && option2.value == "PA"){
+subtotal= 175;
   dcto = 15 / 100;
 }else {
   dcto = 0;
 }
+caja["subtotal"].value = subtotal;
 caja["descuento"].value = dcto;
 total = subtotal - (subtotal * dcto);
 caja["total"].value = total;
@@ -78,23 +78,45 @@ if (opt.text == "Yes/Si") {
   </script>
 </head>
 <body class="text-center" onload="hish()">
+
 <main class="form-signin w-100 m-auto">
 <form id="registro" name="registro" class="form-signin" method="POST" action="" onSubmit="return ComprobarClave()">
-<img class="mb-4" src="public/images/utp.svg" alt="" width="125" height="125">
-    <h1 class="h3 mb-3 fw-normal">Precio USD</h1>
-    <div class="form-floating">
-  SubTotal <input type="text"  class="form-control item" name="subtotal" id="subtotal" onChange="calcular()"/><br>
-  Descuento <input type="text"  class="form-control item" name="descuento" id="descuento" onChange="calcular()"/><br>
-  Total <input type="text"  class="form-control item" name="total" id="total" onChange="calcular()"/><br>
+<h1 class="h3 mb-3 font-weight-normal">Crear Usuario</h1> 
+<section class="cbox1">
+    <div>
+  SubTotal <input type="text"  class="form-control item" name="subtotal" id="subtotal" onChange="calcular()" readonly/><br>
+  Descuento <input type="text"  class="form-control item" name="descuento" id="descuento" onChange="calcular()" readonly/><br>
+  Total <input type="text"  class="form-control item" name="total" id="total" onChange="calcular()" readonly/><br>
   </div>
-  <h1 class="h3 mb-3 font-weight-normal">Crear Usuario</h1>
-        
-
+</section>
+        <br>
         <div class="form-group">
-        <input type="text" class="form-control item" id="Rank" placeholder="Rango" name="Rank" required>
+        <label for="nombre">Nombres:</label>
+        <input type="text" class="form-control item" id="nombre" placeholder="Nombre" name="nombre" required>
         </div>
         <br>
         <div class="form-group">
+        <label for="nombre">Apellidos:</label>
+        <input type="text" class="form-control item" id="apellido" placeholder="Apellido" name="apellido" required>
+        </div> 
+        <br>
+        <div class="form-group">
+        <label for="nombre">Correo Electronico:</label>
+        <input type="text" class="form-control item" id="email" placeholder="Email" name="email" required autofocus>
+        </div>
+        <br>
+        <div class="form-group">
+        <label for="nombre">Contraseña</label>
+        <input type="password" class="form-control item" id="passwrd"  placeholder="Password" name="passwrd" required>
+        </div>
+        <br>
+        <div class="form-group">
+        <label for="nombre">Nuevamente Contraseña</label>
+        <input type="password" class="form-control item" id="repasswrd" placeholder="Password Nuevamente" name="repasswrd" required>
+        </div> 
+        <br>
+        <div class="form-group">
+        <label for="nombre">Cedulación:</label>
         <input type="text" class="form-control item" id="ced" placeholder="Cedulación" name="ced" required>
         </div>
         <br>
@@ -107,19 +129,28 @@ if (opt.text == "Yes/Si") {
         </select>
         <div class="form-group" id="CIE" style="visibility:hidden;">
         <br>
-        <input type="text" class="form-control item" id="CIEEE" placeholder="Miembro IEEE, Introduzca el codigo" name="CIEEE" required>
+        <input type="text" class="form-control item" id="CIEEE" placeholder="Miembro IEEE, Introduzca el codigo" name="CIEEE" onChange="calcular()" required>
         <br>
         </div>
         <div class="form-group">
+        <label for="nombre">Telefono:</label>
         <input type="text" class="form-control item" id="Telf" placeholder="Telefono" name="Telf" required>
         </div>
         <br>
         <div class="form-group">
-        <input type="text" class="form-control item" id="Sexo" placeholder="Sexo" name="Sexo" required>
+        <label for="nombre">Sexo:</label>
+        <select  class="form-control item" name="Sexo" id="Sexo" required>
+        <option value=" " >Escoja su Sexo</option>
+        <option value="0" >Masculino</option>
+        <option value="1" >Femenino</option>
+        <option value="2" >Transformer</option>
+        <option value="3" >Helicoptero Apache</option>
+        <option value="4" >Otros</option>
+        </select>
         </div>
         <br>
         <div class="form-group">
-        <select class="selectpicker countrypicker" data-flag="true" id="Pais" name="Pais" required>
+        <select class="selectpicker countrypicker" data-flag="true" id="Pais" name="Pais" onChange="calcular()" required>
     <option value="  " selected>Select el País</option>
     <option value="EX">Extranjero</option>
     <option value="AF">Afghanistan</option>
@@ -376,48 +407,40 @@ if (opt.text == "Yes/Si") {
         <input type="text" class="form-control item" id="UDF" placeholder="Unidad/Departamento/Facultad" name="UDF" required>
         </div>
         <br>
-        <div class="form-group">
-        <input type="text" class="form-control item" id="nombre" placeholder="Nombre" name="nombre" required>
-        </div>
-        <br>
-        <div class="form-group">
-        <input type="text" class="form-control item" id="apellido" placeholder="Apellido" name="apellido" required>
-        </div> 
-        <br>
-        <div class="form-group">
-        <input type="text" class="form-control item" id="email" placeholder="Email" name="email" required autofocus>
-        </div>
-        <br>
-        <div class="form-group">
-        <input type="password" class="form-control item" id="passwrd"  placeholder="Password" name="passwrd" required>
-        </div>
-        <br>
-        <div class="form-group">
-        <input type="password" class="form-control item" id="repasswrd" placeholder="Password Nuevamente" name="repasswrd" required>
-        </div> 
-        <br>
         <select  class="form-control item" name="menu" id="menu" onChange="calcular()">
+        <option value=" " >Escoja su Posición</option>
         <option value="0" >Estudiante</option>
         <option value="1" >Investigador</option>
         <option value="2" >Autor</option>
         <option value="3" >Docente</option>
         </select>
         <br>
-        <input type="checkbox" class="" id="cena" name="cb1" value="cena">
+        <input type="checkbox" class="" id="cena" name="cb1" value="cena" onChange="calcular()">
         <label for="cb1"> Asistir a la cena  + $10.00</label><br>
-        <input type="checkbox" class="" id="CAcomp" name="cb2" value="CAcomp">
-        <label for="cb1"> Asistir a la cena con Acompañante + $50.00</label><br>
+        <input type="checkbox" class="" id="CAcomp" name="cb2" value="CAcomp" onChange="calcular()">
+        <label for="cb1"> Asistir a la cena con Acompañante + $50.00</label><br><br>
 
-        <h1 class="cbx">Areas de Interes</h1>
-        <input type="checkbox" class="" id="cena" name="cb3" value="cena">
-        <label for="cb1"> Asistir a la cena</label><br>
-        <input type="checkbox" class="" id="cena" name="cb4" value="cena">
-        <label for="cb1"> Asistir a la cena</label><br>
-        <!-- utilizar el laboratorio 1 para esta parte-->
+        <label for="intereses[]">Intereses Personales:</label><br>
+        <label for="musica">Música</label>
+        <input class="check" type="checkbox" id="musica" name="intereses[]" value="Música"><br>
+        <label for="cine">Cine</label>
+        <input class="check" type="checkbox" id="cine" name="intereses[]" value="Cine"><br>
+        <label for="ciencia">Ciencia</label>
+        <input class="check" type="checkbox" id="ciencia" name="intereses[]" value="Ciencia"><br>
+        <label for="moda">Moda</label>
+        <input class="check" type="checkbox" id="moda" name="intereses[]" value="Moda"><br>
+        <label for="educacion">Educación</label>
+        <input class="check" type="checkbox" id="educacion" name="intereses[]" value="Educación"><br>
+        <label for="deportes">Deportes</label>
+        <input class="check" type="checkbox" id="deportes" name="intereses[]" value="Deportes"><br>
 
-<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="ComprobarClave()" value="Aceptar" >Crear Cuenta</button>
+<button class="btn btn-lg btn-primary btn-block" type="button"><a href="./" class="ml-2" style="color:white;">Volver</a></button>
+<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="ComprobarClave()" value="Aceptar" ><a href="?op=RPago" style="color:white;">Inscribir</a></button>
+<button class="btn btn-lg btn-primary btn-block" type="reset" value="Limpiar">Limpiar</button>
+
 </form>
 </main>
+<?php include("footer.php")?>
 <script src="//cdn.tutorialjinni.com/jquery/3.6.1/jquery.min.js"></script>
 <script src="//cdn.tutorialjinni.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="//cdn.tutorialjinni.com/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
@@ -425,3 +448,4 @@ if (opt.text == "Yes/Si") {
 <script src="../Scripts/complementos.js"></script><!-- no esta funcionandome el llamado-->
 </body>
 </html> 
+
