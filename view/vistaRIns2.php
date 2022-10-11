@@ -19,6 +19,8 @@
 <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/nova.css?3.3.36355" />
 <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/5495102b700cc419478b4567.css?themeRevisionID=58d1cab53bf21c58d76dec92"/>
 <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.36355" />
+<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
 <style type="text/css">
 @import url('https://shots.jotform.com/elton/genericTheme.css');@import url(https://fonts.googleapis.com/css?family=Abel);
 
@@ -182,7 +184,68 @@
   /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
     /* Injected CSS Code */
 </style>
+<script>
+  function calcular(){
+select2 = document.getElementById("Pais");
+option2 = select2.options[select2.selectedIndex];
+select = document.getElementById("menu");
+option = select.options[select.selectedIndex];
+//document.getElementById('Rank').value = option2.text;
+caja = document.forms["registro"].elements;
+//subtotal = Number(caja["subtotal"].value);
+if(option.text == "Docente" && option2.value == "PA"){
+subtotal= 175;
+  dcto = 18/100;
+}else if(option.text == "Autor" && option2.value == "PA"){
+subtotal= 275;
+  dcto = 15 / 100;
+}else if(option.text == "Investigador" && option2.value == "PA"){
+  subtotal= 175;
+  dcto = 25 / 100;
+}else if(option.text == "Estudiante" && option2.value == "PA"){
+  subtotal= 125;
+  dcto = 18 / 100;
+}else if (option.text == "Estudiante") {
+  subtotal= 125;
+  dcto = 15 / 100;
+} else if (option.text == "Investigador") {
+subtotal= 175;
+  dcto = 20 / 100;
+} else if (option.text == "Autor") {
+subtotal= 275;
+  dcto = 10 / 100;
+} else if (option.text == "Docente") {
+subtotal= 175;
+  dcto = 15 / 100;
+}else {
+  dcto = 0;
+}
+caja["subtotal"].value = subtotal;
+caja["descuento"].value = dcto;
+total = subtotal - (subtotal * dcto);
+caja["total"].value = total;
+}
+function ComprobarClave(){
+    p1 = document.registro.passwrd.value;
+    p2 = document.registro.repasswrd.value;
 
+    if(p1 != p2){
+      alert("Ambas claves deben ser iguales.");
+      return false;
+    }
+  }
+  function hish(){
+
+sh = document.getElementById("DIEEE");
+opt = sh.options[sh.selectedIndex];
+if (opt.text == "Yes/Si") {
+  document.getElementById('CIE').style.visibility = "visible";
+}else{
+  document.getElementById('CIE').style.visibility = "hidden";
+}
+}
+  
+  </script>
 <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.36355" type="text/javascript"></script>
 <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.36355" type="text/javascript"></script>
 <script src="https://cdn01.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.36355" type="text/javascript"></script>
@@ -233,7 +296,8 @@ if (window.JotForm && JotForm.accessible) $('input_60').setAttribute('tabindex',
 JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Formato de Inscripcion UMA","type":"control_head"},null,{"name":"sexo","qid":"3","text":"Sexo","type":"control_dropdown"},{"name":"nombreDel","qid":"4","text":"Nombre del solicitante","type":"control_fullname"},null,{"name":"correoElectronico","qid":"6","text":"Correo Electronico","type":"control_email"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"fechaDe","qid":"24","text":"Fecha de Nacimiento","type":"control_birthdate"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"imagen","qid":"47","text":"Encabezado%20Formato%20en%20l%C3%ADnea.5cc734df8ff258.61037905","type":"control_image"},{"name":"carreraA","qid":"48","text":"Carrera a la que desea ingresar ","type":"control_dropdown"},{"name":"semestre","qid":"49","text":"Semestre ","type":"control_dropdown"},{"name":"fecha","qid":"50","text":"Fecha de Inscripcion","type":"control_datetime"},null,{"name":"telefonoCelular","qid":"52","text":"Telefono Celular","type":"control_phone"},{"name":"telefonoCasa","qid":"53","text":"Telefono Casa","type":"control_phone"},{"name":"curp","qid":"54","text":"CURP","type":"control_textbox"},{"name":"estadoCivil","qid":"55","text":"Estado Civil","type":"control_dropdown"},{"name":"lugarDe","qid":"56","text":"Lugar de Nacimiento","type":"control_address"},{"name":"direccionPermanente","qid":"57","text":"Direccion Permanente","type":"control_head"},null,{"name":"datosDe","qid":"59","text":"Datos de Estudios Anteriores","type":"control_head"},{"name":"nombreDe60","qid":"60","text":"Nombre de la Institucion Anterior","type":"control_textbox"},{"name":"direccion61","qid":"61","text":"Direccion","type":"control_address"},{"name":"fechaDe62","qid":"62","text":"Fecha de Terminacion","type":"control_datetime"},{"name":"datosDe63","qid":"63","text":"Datos de Padre o Tutor","type":"control_head"},{"name":"nombreDe64","qid":"64","text":"Nombre de Tutor","type":"control_fullname"},{"name":"direccionDe65","qid":"65","text":"Direccion de Tutor","type":"control_address"},{"name":"telefonoCelular66","qid":"66","text":"Telefono Celular de Tutor","type":"control_phone"},null,{"name":"sePagara68","qid":"68","text":"-Se pagara inscripcion y reinscripcion -Se pagaran 12 meses de colegiatura, el pago se realizara los dias 1  al 5 de cada mes. A partir del dia 6 se generara un cargo extra por pago atrasado.-No habra reembolso de ningun pago si el alumno solicita su baja voluntaria.","type":"control_radio"},{"name":"input69","qid":"69","type":"control_address"},{"name":"tags","qid":"70","text":"Tags","type":"control_checkbox"},{"name":"inscribe","qid":"71","text":"Inscribe","type":"control_dropdown"},{"name":"typeA","qid":"72","text":"Descuento en Inscripcion","type":"control_dropdown"},{"name":"descuentoEn73","qid":"73","text":"Descuento en Colegiatura","type":"control_dropdown"},null,{"name":"documentacion","qid":"75","text":"Documentacion","type":"control_checkbox"},{"name":"sePagara","qid":"76","text":"Me comprometo a entregar mi documentacion completa con un plazo maximo de 3 meses una vez iniciado el ciclo. De no ser asi causaria baja definitiva al programa al que me incribo.","type":"control_radio"},{"name":"clicPara","qid":"77","text":"Clic si el solicitante es de posgrado","type":"control_collapse"},null,{"name":"posgrado","qid":"79","text":"Posgrado","type":"control_radio"},null,null,{"name":"cicloEscolar","qid":"82","text":"Ciclo escolar ","type":"control_dropdown"},{"name":"enviar","qid":"83","text":"Enviar","type":"control_button"},{"name":"divisor","qid":"84","type":"control_divider"},{"name":"divisor85","qid":"85","type":"control_divider"},{"name":"divisor86","qid":"86","type":"control_divider"},{"name":"divisor87","qid":"87","type":"control_divider"},{"name":"enviar88","qid":"88","text":"Enviar","type":"control_button"},{"name":"divisor89","qid":"89","type":"control_divider"},{"name":"separadorPagina","qid":"90","text":"Separador pagina","type":"control_pagebreak"},{"name":"separadorPagina91","qid":"91","text":"Separador pagina","type":"control_pagebreak"}]);}, 20); 
 </script>
 </head>
-<body>
+<body onload="hish()">
+<?php include("headerRIns.php")?>
 <form class="jotform-form" action="https://submit.jotform.com/submit/222833629063861/" method="post" name="form_222833629063861" id="222833629063861" accept-charset="utf-8" autocomplete="on">
   <input type="hidden" name="formID" value="222833629063861" />
   <input type="hidden" id="JWTContainer" value="" />
@@ -791,6 +855,7 @@ for (var i = 0; i < all_spc.length; i++)
   all_spc[i].value = "222833629063861-222833629063861";
 }
   </script>
+  <?php include("footer.php")?>
   <div class="formFooter-heightMask">
   </div>
   <div class="formFooter f6 branding21">
