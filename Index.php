@@ -7,7 +7,7 @@
 
 // Metodo donde llevara a la demás páginas
 
-require('controller/Controler.php');
+require('controller/controles.php');
 
 $control = new controlador;
 
