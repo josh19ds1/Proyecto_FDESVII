@@ -78,7 +78,7 @@ if (opt.text == "Yes/Si") {
   </script>
 </head>
 <body class="text-center" onload="hish()">
-
+<?php include("headerRIns.php")?>
 <main class="form-signin w-100 m-auto">
 <form id="registro" name="registro" class="form-signin" method="POST" action="" onSubmit="return ComprobarClave()">
 <h1 class="h3 mb-3 font-weight-normal">Crear Usuario</h1> 
