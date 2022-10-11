@@ -10,7 +10,7 @@
 
 <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
 <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-<link href="public/css/signin.css" rel="stylesheet">
+
 <link rel="stylesheet" href="//cdn.tutorialjinni.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="//cdn.tutorialjinni.com/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
 <link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
@@ -79,10 +79,10 @@ if (opt.text == "Yes/Si") {
 </head>
 <body class="text-center" onload="hish()">
 <?php include("headerRIns.php")?>
-<main class="form-signin w-100 m-auto">
-<form id="registro" name="registro" class="form-signin" method="POST" action="" onSubmit="return ComprobarClave()">
+<main class="cbox1">
+<form id="registro" name="registro" class="" method="POST" action="" onSubmit="return ComprobarClave()">
 <h1 class="h3 mb-3 font-weight-normal">Crear Usuario</h1> 
-<section class="cbox1">
+<section>
     <div>
   SubTotal <input type="text"  class="form-control item" name="subtotal" id="subtotal" onChange="calcular()" readonly/><br>
   Descuento <input type="text"  class="form-control item" name="descuento" id="descuento" onChange="calcular()" readonly/><br>
