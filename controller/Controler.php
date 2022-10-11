@@ -15,9 +15,9 @@ class controlador{
 
     }
 
-    public function Prueba3(){
+    public function Administracion(){
 
-        require("view/prueba3.php");
+        require("view/registropersonal.php");
 
     }   
 

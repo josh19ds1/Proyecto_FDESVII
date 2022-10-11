@@ -1,0 +1,15 @@
+th{
+
+    font-size: 20px;
+    font-size:  'Roboto', sans-serif;
+    background-color: rgba(137, 43, 226, 0.664);
+}
+
+
+td{
+    font-size: 20px;
+    font-size:  'Roboto', sans-serif;
+    color: rgb(250, 245, 245);
+    background-color:  rgba(137, 43, 226, 0.89);
+
+}

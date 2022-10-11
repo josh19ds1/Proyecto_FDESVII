@@ -15,17 +15,20 @@ if (isset($_GET['ops'])){
 
     $opcion=$_GET['ops'];
   
-    if ($opcion=="crear")
-    {
+    if ($opcion=="crear"){
     //Llamo al método ver pasándole la clave que me están pidiendo
-    $control->Registrar();
+            $control->Registrar();
+
+    }elseif($opcion=="Admin"){
+
+          $control->Administracion();
+
     }elseif($opcion="Prueba"){
 
             $control->Prueba3();
 
-
     }else{
-        $control->index();
+             $control->index();
 
     }
 

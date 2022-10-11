@@ -19,7 +19,6 @@
                </ul>
                 <img src="public/src/logo_utp.jpg" class="imagen2">
 
-
         </nav>
     </header>
    
