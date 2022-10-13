@@ -25,7 +25,7 @@ if (isset($_GET['ops'])){
 
     }elseif($opcion="Prueba"){
 
-            $control->Prueba3();
+        
 
     }else{
              $control->index();
