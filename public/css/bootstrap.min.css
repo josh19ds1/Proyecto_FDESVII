@@ -10364,7 +10364,6 @@ border: 2px solid whitesmoke;
 z-index: 2;
 }
 
-
 @media (min-width: 576px) {
   .text-sm-left {
     text-align: left !important;

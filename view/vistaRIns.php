@@ -9,13 +9,8 @@
 <title>Registro de Inscripción</title>
 
 <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
-<<<<<<< Updated upstream
-<link href="public/css/bootstrap.min.css" rel="stylesheet">
-<link href="public/css/signin.css" rel="stylesheet">
-=======
 <link href="../public/css/bootstrap.min.css" rel="stylesheet">
 
->>>>>>> Stashed changes
 <link rel="stylesheet" href="//cdn.tutorialjinni.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="//cdn.tutorialjinni.com/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
 <link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
@@ -25,35 +20,6 @@ select2 = document.getElementById("Pais");
 option2 = select2.options[select2.selectedIndex];
 select = document.getElementById("menu");
 option = select.options[select.selectedIndex];
-<<<<<<< Updated upstream
-document.getElementById('Rank').value = option.text;
-caja = document.forms["registro"].elements;
-subtotal = Number(caja["subtotal"].value);
-
-if (option.text == "Estudiante") {
-  dcto = 15 / 100;
-} else if (option.text == "Investigador") {
-  dcto = 20 / 100;
-} else if (option.text == "Autor") {
-  dcto = 10 / 100;
-} else if (option.text == "Docente") {
-  dcto = 15 / 100;
-} else if(option.text == "Estudiante" && option2.value == "EX"){
-  dcto = 0;
-} else if(option.text == "Investigador" && option2.value == "EX"){
-  dcto = 0;
-}else if(option.text == "Autor" && option2.value == "EX"){
-  dcto = 0;
-}else if(option.text == "Docente" && option2.value == "EX"){
-  dcto = 0;
-}else if(option.text == "Docente" && option2.value == "PA"){
-  dcto = 15/100;
-}else if(option.text == "Autor" && option2.value == "PA"){
-  dcto = 10 / 100;
-}else if(option.text == "Investigador" && option2.value == "PA"){
-  dcto = 20 / 100;
-}else if(option.text == "Estudiante" && option2.value == "PA"){
-=======
 //document.getElementById('Rank').value = option2.text;
 caja = document.forms["registro"].elements;
 //subtotal = Number(caja["subtotal"].value);
@@ -80,15 +46,11 @@ subtotal= 275;
   dcto = 10 / 100;
 } else if (option.text == "Docente") {
 subtotal= 175;
->>>>>>> Stashed changes
   dcto = 15 / 100;
 }else {
   dcto = 0;
 }
-<<<<<<< Updated upstream
-=======
 caja["subtotal"].value = subtotal;
->>>>>>> Stashed changes
 caja["descuento"].value = dcto;
 total = subtotal - (subtotal * dcto);
 caja["total"].value = total;
@@ -116,25 +78,6 @@ if (opt.text == "Yes/Si") {
   </script>
 </head>
 <body class="text-center" onload="hish()">
-<<<<<<< Updated upstream
-<main class="form-signin w-100 m-auto">
-<form id="registro" name="registro" class="form-signin" method="POST" action="" onSubmit="return ComprobarClave()">
-<img class="mb-4" src="public/images/utp.svg" alt="" width="125" height="125">
-    <h1 class="h3 mb-3 fw-normal">Precio USD</h1>
-    <div class="form-floating">
-  SubTotal <input type="text"  class="form-control item" name="subtotal" id="subtotal" onChange="calcular()"/><br>
-  Descuento <input type="text"  class="form-control item" name="descuento" id="descuento" onChange="calcular()"/><br>
-  Total <input type="text"  class="form-control item" name="total" id="total" onChange="calcular()"/><br>
-  </div>
-  <h1 class="h3 mb-3 font-weight-normal">Crear Usuario</h1>
-        
-
-        <div class="form-group">
-        <input type="text" class="form-control item" id="Rank" placeholder="Rango" name="Rank" required>
-        </div>
-        <br>
-        <div class="form-group">
-=======
 <?php include("headerRIns.php")?>
 <main class="cbox1">
 <form id="registro" name="registro" class="" method="POST" action="" onSubmit="return ComprobarClave()">
@@ -174,7 +117,6 @@ if (opt.text == "Yes/Si") {
         <br>
         <div class="form-group">
         <label for="nombre">Cedulación:</label>
->>>>>>> Stashed changes
         <input type="text" class="form-control item" id="ced" placeholder="Cedulación" name="ced" required>
         </div>
         <br>
@@ -187,29 +129,15 @@ if (opt.text == "Yes/Si") {
         </select>
         <div class="form-group" id="CIE" style="visibility:hidden;">
         <br>
-<<<<<<< Updated upstream
-        <input type="text" class="form-control item" id="CIEEE" placeholder="Miembro IEEE, Introduzca el codigo" name="CIEEE" required>
-        <br>
-        </div>
-        <div class="form-group">
-=======
         <input type="text" class="form-control item" id="CIEEE" placeholder="Miembro IEEE, Introduzca el codigo" name="CIEEE" onChange="calcular()" required>
         <br>
         </div>
         <div class="form-group">
         <label for="nombre">Telefono:</label>
->>>>>>> Stashed changes
         <input type="text" class="form-control item" id="Telf" placeholder="Telefono" name="Telf" required>
         </div>
         <br>
         <div class="form-group">
-<<<<<<< Updated upstream
-        <input type="text" class="form-control item" id="Sexo" placeholder="Sexo" name="Sexo" required>
-        </div>
-        <br>
-        <div class="form-group">
-        <select class="selectpicker countrypicker" data-flag="true" id="Pais" name="Pais" required>
-=======
         <label for="nombre">Sexo:</label>
         <select  class="form-control item" name="Sexo" id="Sexo" required>
         <option value=" " >Escoja su Sexo</option>
@@ -223,7 +151,6 @@ if (opt.text == "Yes/Si") {
         <br>
         <div class="form-group">
         <select class="selectpicker countrypicker" data-flag="true" id="Pais" name="Pais" onChange="calcular()" required>
->>>>>>> Stashed changes
     <option value="  " selected>Select el País</option>
     <option value="EX">Extranjero</option>
     <option value="AF">Afghanistan</option>
@@ -480,55 +407,14 @@ if (opt.text == "Yes/Si") {
         <input type="text" class="form-control item" id="UDF" placeholder="Unidad/Departamento/Facultad" name="UDF" required>
         </div>
         <br>
-<<<<<<< Updated upstream
-        <div class="form-group">
-        <input type="text" class="form-control item" id="nombre" placeholder="Nombre" name="nombre" required>
-        </div>
-        <br>
-        <div class="form-group">
-        <input type="text" class="form-control item" id="apellido" placeholder="Apellido" name="apellido" required>
-        </div> 
-        <br>
-        <div class="form-group">
-        <input type="text" class="form-control item" id="email" placeholder="Email" name="email" required autofocus>
-        </div>
-        <br>
-        <div class="form-group">
-        <input type="password" class="form-control item" id="passwrd"  placeholder="Password" name="passwrd" required>
-        </div>
-        <br>
-        <div class="form-group">
-        <input type="password" class="form-control item" id="repasswrd" placeholder="Password Nuevamente" name="repasswrd" required>
-        </div> 
-        <br>
-        <select  class="form-control item" name="menu" id="menu" onChange="calcular()">
-=======
         <select  class="form-control item" name="menu" id="menu" onChange="calcular()">
         <option value=" " >Escoja su Posición</option>
->>>>>>> Stashed changes
         <option value="0" >Estudiante</option>
         <option value="1" >Investigador</option>
         <option value="2" >Autor</option>
         <option value="3" >Docente</option>
         </select>
         <br>
-<<<<<<< Updated upstream
-        <input type="checkbox" class="" id="cena" name="cb1" value="cena">
-        <label for="cb1"> Asistir a la cena  + $10.00</label><br>
-        <input type="checkbox" class="" id="CAcomp" name="cb2" value="CAcomp">
-        <label for="cb1"> Asistir a la cena con Acompañante + $50.00</label><br>
-
-        <h1 class="cbx">Areas de Interes</h1>
-        <input type="checkbox" class="" id="cena" name="cb3" value="cena">
-        <label for="cb1"> Asistir a la cena</label><br>
-        <input type="checkbox" class="" id="cena" name="cb4" value="cena">
-        <label for="cb1"> Asistir a la cena</label><br>
-        <!-- utilizar el laboratorio 1 para esta parte-->
-
-<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="ComprobarClave()" value="Aceptar" >Crear Cuenta</button>
-</form>
-</main>
-=======
         <input type="checkbox" class="" id="cena" name="cb1" value="cena" onChange="calcular()">
         <label for="cb1"> Asistir a la cena  + $10.00</label><br>
         <input type="checkbox" class="" id="CAcomp" name="cb2" value="CAcomp" onChange="calcular()">
@@ -555,7 +441,6 @@ if (opt.text == "Yes/Si") {
 </form>
 </main>
 <?php include("footer.php")?>
->>>>>>> Stashed changes
 <script src="//cdn.tutorialjinni.com/jquery/3.6.1/jquery.min.js"></script>
 <script src="//cdn.tutorialjinni.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="//cdn.tutorialjinni.com/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
@@ -563,7 +448,4 @@ if (opt.text == "Yes/Si") {
 <script src="../Scripts/complementos.js"></script><!-- no esta funcionandome el llamado-->
 </body>
 </html> 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
