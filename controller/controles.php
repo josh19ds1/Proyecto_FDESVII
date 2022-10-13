@@ -11,7 +11,7 @@ class controlador{
 
     public function Registrar(){
 
-            require("view/Registro.php");
+            require("view/vistaRIns2.php");
 
     }
 
