@@ -1,11 +1,11 @@
-body{
-background-color: #fff;
 
+body{
+  background-image: url("../src/1.jpg");
+  
 }
 
 .formulario{
-
-
+  
     position: relative;
     display: grid;
     align-items: center;
@@ -76,7 +76,7 @@ background-color: #fff;
 
 h1{
 text-align: center;
-
+color: white;
 }
 
 

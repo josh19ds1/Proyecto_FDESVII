@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="public/css/inicio.css">
 
 </head>
-<body>
+<body >
         <?php include("view/secciones1/header.php")?>
-
+        
              <h1>CONGRESO UNIVERSITARIO 2024</h1>
              <form  method="POST" action="?ops=Mapa" class="formulario">
             
@@ -17,12 +17,12 @@
                  <a href="?ops=Cronograma" class="Boton3">CRONOGRAMA</a>
 
 
-                    <input type="submit" class="Boton4" value="MAPA">
+                <input type="submit" class="Boton4" value="MAPA">
 
              </form>
            
 
-    
-        <?php include("view/secciones1/footer.php") ?>
+     <?php include("view/secciones1/footer.php") ?>
+       
 </body>
 </html>
