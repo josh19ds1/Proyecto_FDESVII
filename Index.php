@@ -29,7 +29,7 @@ if (isset($_GET['ops'])){
 
     }elseif($opcion="Mapa"){
 
-        $control->Prueba3();
+        $control->Mapa();
 
     }else{
              $control->index();
