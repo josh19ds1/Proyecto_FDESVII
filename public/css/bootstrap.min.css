@@ -10348,6 +10348,25 @@ button.bg-dark:focus {
 .text-center {
   text-align: center !important;
 }
+<<<<<<< HEAD
+=======
+.cbox1{
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+color: black; 
+font-size: 18px; 
+font-weight: 400; 
+text-align: justify; 
+ /*background: rgba(172, 172, 172, 0.521); */
+margin: 0 40% 0;  
+padding: 10px; 
+border-radius: 35px 35px 35px 35px; 
+-moz-border-radius: 35px 35px 35px 35px; 
+-webkit-border-radius: 35px 35px 35px 35px; 
+border: 2px solid whitesmoke;
+z-index: 2;
+}
+
+>>>>>>> Maez
 
 @media (min-width: 576px) {
   .text-sm-left {
@@ -10624,4 +10643,59 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+<<<<<<< HEAD
+=======
+  
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+.form-signin .form-floating:focus-within {
+  z-index: 3;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.mt-4 h4{
+  color:black;
+}
+.mt-4 .ml-2 a:visited{
+  color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+.mt-4 a:link {
+  color: rgb(28, 0, 128);
+  background-color: transparent;
+  text-decoration: none;
+}
+.mt-4 a:visited {
+  color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+.mt-4 a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.mt-4 a:active {
+  color: blueviolet;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.mt-5 h5{
+  color:rgba(0, 0, 0, 0);
+  filter: contrast(0.75);
+}
+>>>>>>> Maez
 }
