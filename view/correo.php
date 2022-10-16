@@ -14,7 +14,11 @@
 </head>
 <body>
     
+<<<<<<< HEAD
     <?php include("../secciones1/header.php") ?>   
+=======
+    <?php include("view/secciones1/header.php") ?>   
+>>>>>>> 8fd5cc746477d4c4c42d42c0631e5738883a1d65
 
     <div class="container">		
         <!-- Gmail Header Starts here -->
