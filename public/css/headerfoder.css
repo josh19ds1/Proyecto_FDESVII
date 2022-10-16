@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 header{
@@ -6,6 +7,12 @@ header{
   padding: 0;
   position: relative;
 }
+=======
+body {
+  background-color: #fff !important;
+  position: relative; }
+  
+>>>>>>> Maez
 
 .hero {
     height: 100vh;
@@ -18,6 +25,7 @@ header{
   padding: .5rem 0;
   background: rgb(119, 14, 151); }
   .top-bar a {
+<<<<<<< HEAD
     color: #ffffff; }
 
 .site-navbar {
@@ -26,6 +34,16 @@ header{
   position: relative;
   width: 100%;
   padding: 6px; }
+=======
+    color: #ffffff !important; }
+
+.site-navbar {
+  margin-bottom: 1px;
+  
+  position: relative;
+  width: 100%;
+  padding: 1rem; }
+>>>>>>> Maez
   @media (max-width: 991.98px) {
     .site-navbar {
       padding-top: 3rem;
@@ -93,7 +111,11 @@ header{
         padding: 0px 0;
         margin-top: 20px;
         margin-left: 0px;
+<<<<<<< HEAD
         background: #fff;
+=======
+        background: #fff !important;
+>>>>>>> Maez
         -webkit-transition: 0.2s 0s;
         -o-transition: 0.2s 0s;
         transition: 0.2s 0s; }
@@ -111,7 +133,11 @@ header{
             pointer-events: none; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top:before {
             border-color: rgba(136, 183, 213, 0);
+<<<<<<< HEAD
             border-bottom-color: #fff;
+=======
+            border-bottom-color: #fff !important;
+>>>>>>> Maez
             border-width: 10px;
             margin-left: -10px; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown a {
@@ -133,8 +159,13 @@ header{
             padding: 9px 20px;
             display: block; }
             .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover {
+<<<<<<< HEAD
               background: #f8f9fa;
               color: #ced4da; }
+=======
+              background: #f8f9fa !important;
+              color: #ced4da !important; }
+>>>>>>> Maez
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
             content: "\e315";
             right: 20px; }
@@ -142,8 +173,13 @@ header{
             left: 100%;
             top: 0; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:active > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:focus > a {
+<<<<<<< HEAD
             background: #f8f9fa;
             color: #ced4da; }
+=======
+            background: #f8f9fa !important;
+            color: #ced4da !important; }
+>>>>>>> Maez
       .site-navbar .site-navigation .site-menu .has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
         color: #007bff; }
       .site-navbar .site-navigation .site-menu .has-children:hover, .site-navbar .site-navigation .site-menu .has-children:focus, .site-navbar .site-navigation .site-menu .has-children:active {
@@ -176,7 +212,11 @@ div {
 
 .link {
   text-decoration: none;
+<<<<<<< HEAD
   color: #b7b7b7;
+=======
+  color: #b7b7b7 !important;
+>>>>>>> Maez
   margin: 5px;
   width: 50px;
   height: 25px;
