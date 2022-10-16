@@ -5,20 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
-
-
-
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="public/css/bootstrap.min.css">
-
 <!-- Style -->
 <link rel="stylesheet" href="public/css/headerfoder.css">
-
-
 </head>
 <body>
-    <div class="pie">
         <!--foter-->
         <section class="general formu">
       <!--parte de la informacion coludna izquierda-->
@@ -59,7 +51,6 @@
           </div>
       </section>
   </section>
-
   <hr>
   <!--footer-->
   <footer class="derecho">
@@ -68,6 +59,5 @@
           <!--dirrecion de el link que de imaguen que tenia-->
       </section>
   </footer>
-  </div>
 </body>
 </html>

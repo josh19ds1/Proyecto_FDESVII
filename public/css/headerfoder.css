@@ -1,14 +1,11 @@
-.Cabeza{
-background-color: white;
-margin: 0;
-padding: 0;
-}
-.pie{
 
+
+header{
   background-color: white;
+  margin: 0;
   padding: 0;
+  position: relative;
 }
-
 
 .hero {
     height: 100vh;
@@ -24,11 +21,11 @@ padding: 0;
     color: #ffffff; }
 
 .site-navbar {
-  margin-bottom: 1px;
+  margin-bottom: 0px;
   
   position: relative;
   width: 100%;
-  padding: 1rem; }
+  padding: 6px; }
   @media (max-width: 991.98px) {
     .site-navbar {
       padding-top: 3rem;

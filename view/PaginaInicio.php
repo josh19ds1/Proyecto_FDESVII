@@ -22,7 +22,7 @@
              </form>
            
 
-     <?php include("view/secciones1/footer.php") ?>
-       
+              <?php include("view/secciones1/footer.php")?>
+          
 </body>
 </html>
