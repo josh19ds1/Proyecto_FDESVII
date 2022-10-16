@@ -1,0 +1,28 @@
+
+
+
+ .fondoutp{
+  background-image: url("../src/utp-imagen.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size:cover;
+  background-blend-mode: darken;
+} 
+
+table{
+  background-color: white;
+  width: 42%;
+  height: 42%;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+article{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
