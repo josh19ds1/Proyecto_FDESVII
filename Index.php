@@ -7,7 +7,7 @@
 
 // Metodo donde llevara a la demás páginas
 
-require('controller/Controler.php');
+require('controler/Controler.php');
 
 $control = new controlador;
 
@@ -16,21 +16,23 @@ if (isset($_GET['ops'])){
     $opcion=$_GET['ops'];
   
     if ($opcion=="crear"){
-    //Llamo al método ver pasándole la clave que me están pidiendo
-            $control->Registrar();
+    
+
+            $control -> Registrar();
+
 
     }elseif($opcion=="Admin"){
 
           $control->Administracion();
 
-    }elseif($opcion="cronograma"){
+    }elseif($opcion=="Cronograma"){
 
-            $control->Prueba3();
+            $control->cronograma();
 
 
-    }elseif($opcion="Mapa"){
+    }elseif($opcion=="Mapa"){
 
-            $control->Mapa();
+            $control->mapa();
 
         }else{
              $control->index();

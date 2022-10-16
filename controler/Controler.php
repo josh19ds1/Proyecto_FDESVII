@@ -11,9 +11,16 @@ class controlador{
 
     public function Registrar(){
 
-            require("view/Registro.php");
+            require("view/vistaRIns2.php");
 
     }
+
+    public  function cronograma(){
+
+        require("view/cronograma.php");
+    }
+
+
 
     public function Administracion(){
 
@@ -21,5 +28,9 @@ class controlador{
 
     }   
 
+    public function mapa(){
+
+        require("view/mapa.php");
+    }
 
 }
