@@ -7,9 +7,9 @@
    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-<link href="../public/css/bootstrap.min.css" rel="stylesheet">
+<link href="public/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet"  href=../public/css/congresostyle.css>
+<link rel="stylesheet"  href=public/css/congresostyle.css>
 
 </head>
 
@@ -19,7 +19,7 @@
 
 <section >
       <section>
-      <?php include("secciones/headerBry.php")?>
+      <?php include("view/sechedyfoot/encabezado.php")?>
       </section>
 
   <br><br><br>
@@ -88,7 +88,7 @@
       <br><br>
 </section> 
 <br>
-<?php include("secciones/footerBry.php")?>
+<?php include("view/sechedyfoot/footer.php")?>
 
 </section>
 

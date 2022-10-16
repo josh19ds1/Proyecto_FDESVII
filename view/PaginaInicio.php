@@ -8,7 +8,7 @@
 </head>
 
 <body >
-        <?php include("view/secciones1/header.php")?>
+        <?php include("view/sechedyfoot/encabezado.php")?>
         
 
              <h1>CONGRESO UNIVERSITARIO 2024</h1>
@@ -21,13 +21,8 @@
 
              </form>
            
-
-
-              <?php include("view/secciones1/footer.php")?>
-          
-
     
-        <?php include("view/secciones1/footer.php") ?>
+        <?php include("view/sechedyfoot/footer.php") ?>
 
 </body>
 </html>
