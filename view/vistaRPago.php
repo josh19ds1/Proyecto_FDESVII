@@ -6,19 +6,21 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Formulario de Tarjeta de Crédito Dinámico</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="secciones/estilos.css">
+	<link rel="stylesheet" href="public/css/estilos.css">
+
+
 </head>
 <body>
-<?php include("secciones/headerRIns.php")?>
+	<?php include("view/sechedyfoot/encabezado.php")?>
 	<div class="contenedor">
 
 		<!-- Tarjeta -->
 		<section class="tarjeta" id="tarjeta">
 			<div class="delantera">
 				<div class="logo-marca" id="logo-marca">
-					<img src="../public/src/logos/visa.png" alt="">
+					<img src="public/src/logos/visa.png" alt="">
 				</div>
-				<img src="../public/src/chip-tarjeta.png" class="chip" alt="">
+				<img src="public/src/chip-tarjeta.png" class="chip" alt="">
 				<div class="datos">
 					<div class="grupo" id="numero">
 						<p class="label">Número Tarjeta</p>
@@ -97,13 +99,13 @@
 				</div>
 			</div>
 			
-      <button class="btn-enviar" type="submit" value="Aceptar" ><a href="?op=pagoexito" style="color:white;">Enviar</a></button>
+      <button class="btn-enviar" type="button" value="Aceptar" ><a href="?ops=pagoexito" style="color:white;">Enviar</a></button>
 	  <button class="btn btn-lg btn-primary btn-block" type="button"><a href="./" class="ml-2" style="color:white;">Volver</a></button>
 		</form>
 	</div>
 
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="../public/javascript/main.js"></script>
+	<script src="public/javascript/main.js"></script>
   <?php include("secciones/footerRIns.php")?>
 </body>
 </html>

@@ -11,8 +11,7 @@
 
 </head>
 <body >
-
-<?php include("view/encabezado.php")?>
+<?php include("view/sechedyfoot/encabezado.php")?>
 <div class="hero" style="background-image: url('public/images/1.jpg');">
     <div align="center" class="txtc">
  <form class="revision">        
@@ -28,6 +27,6 @@
     </div>
  </form>  
 </div>
-    <?php include("view/footer.php")?>
+        <?php include("view/sechedyfoot/footer.php") ?>
 </body>
 </html>

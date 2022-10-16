@@ -34,7 +34,16 @@ if (isset($_GET['ops'])){
 
             $control->mapa();
 
-        }else{
+    }elseif($opcion=="pagoexito"){
+
+        $control-> PagoExitoso();
+    
+    
+    }elseif($opcion=="Mapa"){
+
+            $control->mapa();
+
+    }else{
              $control->index();
 
     }
