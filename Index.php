@@ -23,21 +23,10 @@ if (isset($_GET['ops'])){
 
           $control->Administracion();
 
-<<<<<<< HEAD
-    }elseif($opcion="Cronograma"){
+    }elseif($opcion="cronograma"){
 
             $control->Prueba3();
 
-    }elseif($opcion="Mapa"){
-
-        $control->Prueba3();
-
-=======
-    }elseif($opcion="Prueba"){
-
-            $control->Prueba3();
-
->>>>>>> 52c3ffa5197b2574f8808387a38cce5c3d35a999
     }else{
              $control->index();
 
