@@ -1,120 +1,28 @@
-.fondoFoto{
-  background-color: indigo;
-}
-
-.div1{ 
-width: auto; 
-border-color: indigo;
-border: 2px;
-}
-
-
-.fondo{
-  border-color: rgb(22, 18, 18);/*esta es para controlar la parte derecha de las redes*/
-  background-color: indigo;
-  color:white;
-  height: 52px;
-  width: 75%;
-  float: left;
-}
-.logo{
-  float:right;
-  border-radius: 50%;
-}
-
-.titulo{
-  border-color: black; /*esta es para controlar la parte de las redes*/
-  background-color:indigo;
-  color: white;
-  height:52px;
-  width: 15%;
-}
-
-.ulbar{
- list-style-type: none;
-  font-size: 18px;
-  padding:0;
-  margin: 0;
-  position: relative;
-  display:flex;
-}
-
-li{
-  float: left;
-  
-}
-
-li a{
-  text-decoration: none;
-  color: white;
-  padding-left: 119px;
-  padding-right:112px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color:blueviolet;
-  font-size: 17px;
-  font-weight: bold;
-  border-color: indigo;
-  border-width: 1px;
-  border-style: solid;
-}
-
-li a:hover{
-  background-color:indigo;
-  color: white;
-  width: 100%;
-}
-
-
-h2{
-color: white;
-}
 
 
 
+ .fondoutp{
+  background-image: url("../src/utp-imagen.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size:cover;
+  background-blend-mode: darken;
+} 
 
-
-.link {
-    text-decoration: none;
-    color: #b7b7b7;
-    width: 55px;
-    height: 35px;
-    justify-content: center;
-    align-items: center;
-    background: rgb(28, 28, 28);
-    border-radius: 5px;
-    transition: 0.4s;
-    margin: 2px;
-  }
-
-  h2{
-    text-align: center;
-  }
-  
-  footer{
-    text-align: center;
-    color:white;
-    background-color: indigo;
-}
-
-.tabla{
-  text-align: center;
-  margin:auto;
+table{
   background-color: white;
+  width: 42%;
+  height: 42%;
 }
-body{
-  background-color: indigo;
-}
-/*
-.nombre{
-  border: 2px;
-  border-color: black;
-  background-color:white;
-  width: 325px;
-  height: 225px;
-}*/
 
-.mapa{
-  width: 150px;
-  height: 150 px;
+h1{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+article{
+  text-align: center;
+  color: white;
+  font-size: 50px;
 }
