@@ -12,7 +12,7 @@
 </head>
 <body >
 
-    <?php include("view/header.php")?>
+<?php include("view/encabezado.php")?>
 <div class="hero" style="background-image: url('public/images/1.jpg');">
     <div align="center" class="txtc">
  <form class="revision">        
