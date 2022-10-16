@@ -1,20 +1,12 @@
 <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-=======
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="public/css/header.css">
+    <link rel="stylesheet" href="public/css/header.css">   
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/f751f69ef4.js" crossorigin="anonymous"></script>
 </head>
 <body>
