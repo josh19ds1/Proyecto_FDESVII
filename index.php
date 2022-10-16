@@ -1,28 +1,46 @@
 <?php
+// *********************************/
+// *                               */
+// *  >>> MASTERS DEVELOPERS<<<    */ 
+// *                               */
+// *********************************/
 
-//Incluyo los archivos necesarios
-require("./controller/controller.php");
+// Metodo donde llevara a la demás páginas
 
-//Instancio el controlador
-$controller = new Controller;
+require('controller/Controler.php');
 
-//Decido la ruta en función de los elementos del array
-if (isset($_GET['op'])){
+$control = new controlador;
 
-    $opcion=$_GET['op'];
+if (isset($_GET['ops'])){
 
-    if ($opcion=="RIns")
-    {
+    $opcion=$_GET['ops'];
+  
+    if ($opcion=="crear"){
     //Llamo al método ver pasándole la clave que me están pidiendo
-    $controller->RR();
+            $control->Registrar();
+
+    }elseif($opcion=="Admin"){
+
+          $control->Administracion();
+
+
+    }elseif($opcion="Cronograma"){
+
+            $control->Prueba3();
+
+    }elseif($opcion="Mapa"){
+
+        $control->Prueba3();
+
+
+    }else{
+             $control->index();
+
     }
-    elseif ($opcion=="RPago")
-    {
-    $controller->PP();
-    }
+
 }
 else{
 
     //Llamo al método por defecto del controlador
-    $controller->index();
+    $control->index();
 }
