@@ -1,6 +1,11 @@
 
 
+.imagenSa{
+position: relative;
+width: 25%;
 
+
+}
  .fondoutp{
   background-image: url("../src/utp-imagen.jpg");
   background-repeat: no-repeat;

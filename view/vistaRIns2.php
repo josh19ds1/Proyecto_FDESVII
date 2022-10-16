@@ -143,7 +143,7 @@
     }
   
     .supernova {
-      background-color: rgb(255, 255, 255);
+      
     }
     .supernova body {
       background: transparent;
@@ -162,10 +162,7 @@
         background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-      }
-      .supernova {
-        background-image: url(../public/src/1.jpg);
-        
+  background-image: url(public/src/1.jpg);
       }
       #stage {
         background-image: url("https://www.jotform.com/uploads/UMAMorelos/form_files/Sin%20t%C3%ADtulo-1.5e3990e36a1ac3.68780851.JPG");
@@ -306,8 +303,14 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
 </head>
 
 
+
 <body onload="hish()">
-<?php include("secciones/headerRIns.php")?>
+<?php include("view/sechedyfoot/encabezado.php")?>
+        
+<section style="background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../public/src/1.jpg);">
 <form class="jotform-form" action="https://submit.jotform.com/submit/222833629063861/" method="post" name="registro" id="registro" accept-charset="utf-8" autocomplete="on" onload="hish1()">
   <input type="hidden" name="formID" value="222833629063861" />
   <input type="hidden" id="JWTContainer" value="" />
@@ -446,14 +449,14 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
               <span class="form-sub-label-container" style="vertical-align:top">
                 <input type="tel" class="currentDate form-textbox validate[limitDate]" id="day_50" name="q50_fecha[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="11" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_day" />
                 <span class="date-separate" aria-hidden="true">
-                   -
+                   -
                 </span>
                 <label class="form-sub-label" for="day_50" id="sublabel_50_day" style="min-height:13px" aria-hidden="false"> Día </label>
               </span>
               <span class="form-sub-label-container" style="vertical-align:top">
                 <input type="tel" class="form-textbox validate[limitDate]" id="month_50" name="q50_fecha[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="10" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_month" />
                 <span class="date-separate" aria-hidden="true">
-                   -
+                   -
                 </span>
                 <label class="form-sub-label" for="month_50" id="sublabel_50_month" style="min-height:13px" aria-hidden="false"> Mes </label>
               </span>
@@ -821,7 +824,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <div id="cid_53" class="form-input-wide">
           <span class="form-sub-label-container" style="vertical-align:top">
             <input type="tel" id="Telf" placeholder="Telefono" name="Telf" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_53 tel-national" data-masked="true" value="" data-component="phone" aria-labelledby="label_53" />
-            <label class="form-sub-label" for="input_53_full" id="sublabel_53_masked" style="min-height:13px" aria-hidden="false">  </label>
+            <label class="form-sub-label" for="input_53_full" ids="sublabel_53_maked" style="min-height:13px" aria-hidden="false">  </label>
           </span>
         </div>
       </li>
@@ -852,7 +855,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <li class="form-line" data-type="control_button" id="id_83">
           <div id="cid_83" class="form-input-wide">
             <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-              <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="button"><a href="./" class="ml-2" style="text-decoration: none">Volver</a></button>
+              <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="button"><a href="vistaRPago.php" class="ml-2" style="text-decoration: none">Volver</a></button>
             <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="submit" onClick="ComprobarClave()" value="Aceptar" ><a href="?op=RPago" style="text-decoration: none">Inscribir</a></button>
             </div>
           </div>
@@ -879,10 +882,16 @@ for (var i = 0; i < all_spc.length; i++)
   all_spc[i].value = "222833629063861-222833629063861";
 }
   </script>
+  </section>
+
+
   <?php include("secciones/footerRIns.php")?>
+
+
+  
   <div class="formFooter-heightMask">
   </div>
-  <div class="formFooter f6 branding21">
+  <div class="formFooter f6 branding21" style="background-color:purple;">
     <div class="formFooter-wrapper formFooter-leftSide">
       <a href="" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="../public/src/utp.svg" alt="UTP logo" style="height: 44px;"></a>
     </div>

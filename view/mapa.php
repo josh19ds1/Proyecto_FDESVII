@@ -9,7 +9,7 @@
 <link href="public/css/bootstrap.min.css" rel="stylesheet">
 <link  href =" https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap " rel =" hoja de estilo " >
 
-<link rel="hoja de estilo"  href="../public/css/congresostyle.css">
+<link rel="hoja de estilo"  href="public/css/congresostyle.css">
 
 </head>
 
@@ -19,7 +19,8 @@
 
   
   <section>
-     <?php include("secciones/header.php")?>
+  <?php include("view/sechedyfoot/encabezado.php")?>
+        
   </section>
    <br><br><br>
 
@@ -27,7 +28,9 @@
    <section class="utpfondo">
       <article>
       <br><br>
-   <h2>AQUI SE MOSTRARA MAPA DEL CONGRESO 2024</h2>     
+   <h2>AQUI SE MOSTRARA MAPA DEL CONGRESO 2024</h2>  
+   <img src="public/src/sala.JPG" class="imagenSa">
+   
 </artcile>
     
    </section> 
@@ -36,7 +39,8 @@
       <br><br>
 
      <section>
-        <?php include("secciones/footer.php")?>
+     <?php include("view/sechedyfoot/footer.php")?>
+        
      </section>
 
 </body>

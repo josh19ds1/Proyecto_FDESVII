@@ -11,8 +11,7 @@
 <link rel="stylesheet" href="public/css/bootstrap.min.css">
 
 <!-- Style -->
-<link rel="stylesheet" href="public/css/headerfoder.css">
-
+    <link rel="stylesheet" href="public/css/headerfoder.css">
 
 </head>
 <body>
