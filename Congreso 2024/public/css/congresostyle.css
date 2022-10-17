@@ -12,8 +12,8 @@
 
 table{
   background-color: white;
-  width: 42%;
-  height: 42%;
+  width: 30%;
+  height: 30%;
 }
 
 h1{
@@ -21,8 +21,16 @@ h1{
   color: white;
   font-size: 50px;
 }
+
+h2{
+  text-align: center;
+  color: white ;
+  font-size: 50px;
+}
+
 article{
   text-align: center;
   color: white;
   font-size: 50px;
 }
+
