@@ -11,7 +11,7 @@ class controlador{
 
     public function Registrar(){
 
-            require("view/vistaRPago.php");
+            require("view/vistaRIns2.php");
 
     }
 
@@ -35,6 +35,11 @@ class controlador{
     public function PagoExitoso(){
 
         require("view/confirmarPago.php");
+    }
+
+    public function RegPago(){
+
+        require("view/vistaRPago.php");
     }
 
 

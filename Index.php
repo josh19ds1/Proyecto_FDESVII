@@ -21,6 +21,10 @@ if (isset($_GET['ops'])){
             $control -> Registrar();
 
 
+    }elseif($opcion=="RPago"){
+
+            $control -> RegPago();
+
     }elseif($opcion=="Admin"){
 
           $control->Administracion();

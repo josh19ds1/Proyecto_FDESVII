@@ -311,7 +311,10 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../public/src/1.jpg);">
-<form class="jotform-form" action="https://submit.jotform.com/submit/222833629063861/" method="post" name="registro" id="registro" accept-charset="utf-8" autocomplete="on" onload="hish1()">
+
+
+
+<form class="jotform-form" action="?ops=RPago" method="post" name="registro" id="registro" accept-charset="utf-8" autocomplete="on" onload="hish1()">
   <input type="hidden" name="formID" value="222833629063861" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -854,9 +857,10 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
       </li>
         <li class="form-line" data-type="control_button" id="id_83">
           <div id="cid_83" class="form-input-wide">
+            <!-- aqui esta el boton con las variables-->
             <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-              <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="button"><a href="vistaRPago.php" class="ml-2" style="text-decoration: none">Volver</a></button>
-            <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="submit" onClick="ComprobarClave()" value="Aceptar" ><a href="?op=RPago" style="text-decoration: none">Inscribir</a></button>
+              <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="button"><a href="#" class="ml-2" style="text-decoration: none">Volver</a></button>
+            <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="submit" onClick="ComprobarClave()" value="Aceptar" ><a href="?ops=RPago" style="text-decoration: none">Inscribir</a></button>
             </div>
           </div>
         </li>
@@ -868,20 +872,26 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         </li>
       </ul>
   </div>
+
   <script>
   JotForm.showJotFormPowered = "new_footer";
   </script>
+
   <script>
   JotForm.poweredByText = "Powered by Jotform";
   </script>
+
   <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="222833629063861" />
-  <script type="text/javascript">
-  var all_spc = document.querySelectorAll("form[id='222833629063861'] .si" + "mple" + "_spc");
-for (var i = 0; i < all_spc.length; i++)
-{
-  all_spc[i].value = "222833629063861-222833629063861";
-}
-  </script>
+
+
+      <script type="text/javascript">
+            var all_spc = document.querySelectorAll("form[id='222833629063861'] .si" + "mple" + "_spc");
+                  for (var i = 0; i < all_spc.length; i++)
+                  {
+                    all_spc[i].value = "222833629063861-222833629063861";
+                  }
+      </script>
+
   </section>
 
 
@@ -892,9 +902,11 @@ for (var i = 0; i < all_spc.length; i++)
   <div class="formFooter-heightMask">
   </div>
   <div class="formFooter f6 branding21" style="background-color:purple;">
+
     <div class="formFooter-wrapper formFooter-leftSide">
-      <a href="" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="../public/src/utp.svg" alt="UTP logo" style="height: 44px;"></a>
+      <a href="" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="public/src/utp.svg" alt="UTP logo" style="height: 44px;"></a>
     </div>
+
     <div class="formFooter-wrapper formFooter-rightSide">
       <span class="formFooter-text">
         UTP Congreso 2024
@@ -902,6 +914,9 @@ for (var i = 0; i < all_spc.length; i++)
       <a class="formFooter-button" href="" target="_blank">Unete</a>
     </div>
   </div>
-</form></body>
+</form>
+
+
+</body>
 </html>
 <script type="text/javascript">JotForm.ownerView=true;</script>
