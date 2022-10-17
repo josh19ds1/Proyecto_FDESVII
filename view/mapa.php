@@ -7,40 +7,39 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 <link href="public/css/bootstrap.min.css" rel="stylesheet">
-<link  href =" https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap " rel =" hoja de estilo " >
-
-<link rel="hoja de estilo"  href="public/css/congresostyle.css">
+<!--<link  href =" https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap " rel =" hoja de estilo " >
+-->
+<link rel="stylesheet"  href="public/css/congresostyle.css">
 
 </head>
-
-
 <body >
 
 
   
-  <section>
-  <?php include("view/sechedyfoot/encabezado.php")?>
-        
+  <section>  
+    <?php include("view/sechedyfoot/encabezado.php")?>
   </section>
    <br><br><br>
 
 
-   <section class="utpfondo">
-      <article>
-      <br><br>
-   <h2>AQUI SE MOSTRARA MAPA DEL CONGRESO 2024</h2>  
-   <img src="public/src/sala.JPG" class="imagenSa">
+   <section class="fondoutp">
+
+      <article class="contenido">
+      <br>
+             <h2 >MAPA DEL CONGRESO 2024</h2>
+                  <section class="imagenmapa">
+                      <img src="public/src/mapa.png" >
+                      <br><br>
+                  </section>
    
-</artcile>
-    
+      </article>
    </section> 
    
    
       <br><br>
 
      <section>
-     <?php include("view/sechedyfoot/footer.php")?>
-        
+     <?php include("view/sechedyfoot/footer.php") ?>
      </section>
 
 </body>
