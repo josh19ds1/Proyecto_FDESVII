@@ -1,8 +1,19 @@
+
+h1{
+    text-align: center;
+    margin-top: 25px;
+}
+table{
+    margin-top: 25px;
+margin-left: 25px;
+border-collapse: collapse;
+}
 th{
 
     font-size: 20px;
     font-size:  'Roboto', sans-serif;
-    background-color: rgba(137, 43, 226, 0.664);
+    background-color: #0D153A;
+    color:white;
 }
 
 
@@ -10,6 +21,13 @@ td{
     font-size: 20px;
     font-size:  'Roboto', sans-serif;
     color: rgb(250, 245, 245);
-    background-color:  rgba(137, 43, 226, 0.89);
+    background-color:  #3D58F1;
 
+}
+
+.imgedit{
+    margin-left: 5px;
+    width: 24px;
+    display: flex;
+    align-items: center;
 }
