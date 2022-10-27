@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="public/css/registPersonal.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 
 </head>
 <body>
-<?php include("view/secciones1/header.php")?>
+<?php include("view/sechedyfoot/encabezado.php")?>
         
 <div class="container">
  
@@ -26,9 +24,7 @@
                 <th>Email</th>
                 <th>direccion</th>
                 <th>usuario</th>
-                <th>Pago</th>
-                
-                
+
             </tr>
         </thead>
         <tbody>
@@ -38,9 +34,6 @@
                 <td>JuanCarlos@midominio.com</td>
                 <td>Panama</td>
                 <td>ESTUDIANTE</td>
-                <td>si</td>
-
-
 
             </tr>
             <tr>
@@ -49,7 +42,7 @@
                 <td>Juan@midominio.com</td>
                 <td>COLON</td>
                 <td>INVESTIGADOR</td>
-                <td>si</td>
+
             </tr>
             <tr>
                 <td>Maria</td>
@@ -57,7 +50,7 @@
                 <td>Maria@midominio.com</td>
                 <td>Panama</td>
                 <td>PROFESOR</td>
-    |           <td>si</td>
+
             </tr>
             <tr>
                 <td>Maria</td>
@@ -65,7 +58,7 @@
                 <td>Maria@midominio.com</td>
                 <td>Panama</td>
                 <td>PROFESOR</td>
-    |           <td>si</td>
+
             </tr>
             <tr>
                 <td>Maria</td>
@@ -73,7 +66,7 @@
                 <td>Maria@midominio.com</td>
                 <td>Panama</td>
                 <td>PROFESOR</td>
-    |           <td>si</td>
+
             </tr>
             <tr>
                 <td>Maria</td>
@@ -81,7 +74,6 @@
                 <td>Maria@midominio.com</td>
                 <td>Panama</td>
                 <td>PROFESOR</td>
-    |           <td>si</td>
             </tr>
         </tbody>
     </table>

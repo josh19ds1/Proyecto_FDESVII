@@ -1,13 +1,4 @@
 
-body{
-  background-image: url("../src/1.jpg");
-  
-background-color: #fff;
-}
-
-
-
-
 .formulario{
 
     position: relative;
@@ -19,112 +10,84 @@ background-color: #fff;
 .Boton{
     /*caja*/
  color:#fff;
- background-color: #7a1c79;
+ background-color: #3D58F1;
  padding: 50px 10px;
- margin: 5px;
+ margin-top: 10px;
  /*texto*/
  text-decoration: none;
- font-size: 20px;
+ font-size: 52px;
  font-size: 'Roboto', 'sans-seriff';
  text-align: center;
  font-weight: bolder;
  /*posicion*/
-  grid-column: 1/3;
+ position: absolute;
+ bottom: 178px;
+ left: 163px;
  border-radius: 5px;
  -webkit-border-radius: 5px;
  -moz-border-radius: 5px;
  -ms-border-radius: 5px;
  -o-border-radius: 5px;
 }
-
-.Boton2{
-    text-decoration: none;
-    color:#fff;
-    background-color: #7a1c79;
-    padding: 50px 10px;
-    font-size: 20px;
-    font-size:  'Roboto', sans-serif;
-    font-weight: bolder;
-    text-align: center;
+.Boton:hover {
+    background-color: #0D153A;
+    color: #E1F3F5;
     border-radius: 5px;
-    grid-column:4/6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
 }
 
-.Boton3{
-    text-decoration: none;
-    color:#fff;
-    background-color: #7a1c79;
-    padding: 50px 10px; 
-    margin: 5px;
-    font-size: 20px;
-    font-size:  'Roboto', sans-serif;
-    font-weight: bolder;
-    text-align: center;
-    border-radius: 5px;
-    grid-column:7/9;
-}
 
-.Boton4{
-    text-decoration: none;
-    color:#fff;
-    background-color: #7a1c79;
-    padding:  50px 10px;
-    margin: 5px;
-    font-size: 20px;
-    font-size:  'Roboto', sans-serif;
-    font-weight: bolder;
-    text-align: center;
-    border-radius: 5px;
-    grid-column:10/12;
-}
+
 
 h1{
 text-align: center;
 
-color: white;
+color: black;
 
 
 }
 
 
-
-.Boton:hover {
-    background-color: #310831;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    
-}
-.Boton2:hover {
-    background-color: #310831;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    
-}
-.Boton3:hover {
-    background-color: #310831;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    
-}
-.Boton4:hover {
-    background-color: #310831;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    
+.sec{
+position: relative;
+display: grid;
+grid-template-columns: repeat(6,1fr);
+align-items: center;
 }
 
+.imagen1{
+
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    left: 25px;
+    grid-column: 1/3;
+
+}
+.imagen2{
+
+  width: 100%;
+  height: 150x;
+  object-fit: cover;
+  margin-top: 2px;
+ 
+}
+.novedades{
+    display: block;
+    margin: 10px auto;
+    max-width: 300px;
+    width: 300px!important;
+    text-align: center;
+    padding-bottom: 1em;
+    position: relative;
+    grid-column: 5/7;
+
+}
 
 
 
