@@ -14,9 +14,9 @@
 </head>
 <body >
 
+<section>
 
-  
-  <section>
+<section>
      <?php include("secciones/header.php")?>
   </section>
    <br><br><br>
@@ -24,11 +24,12 @@
 
    <section class="fondoutp">
 
-      <article class="contenido">
+      <article>
       <br>
-             <h2 >MAPA DEL CONGRESO 2024</h2>
+             <h2 class="mapatitulo">MAPA DEL CONGRESO 2024</h2>
+             <br>
                   <section class="imagenmapa">
-                      <img src="../public/src/mapa.png" >
+                      <img class="mapa_img" src="../public/src/mapa.png"  >
                       <br><br>
                   </section>
    
@@ -42,5 +43,8 @@
         <?php include("secciones/footer.php")?>
      </section>
 
+</section>
+  
+  
 </body>
 </html>
