@@ -38,6 +38,10 @@ if (isset($_GET['ops'])){
 
             $control->ListaUsuario();
 
+    }elseif($opcion=="Qr"){
+
+            $control->ScanQR();
+
     }elseif($opcion=="pagoexito"){
 
         $control-> PagoExitoso();

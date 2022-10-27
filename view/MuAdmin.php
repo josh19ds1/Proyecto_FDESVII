@@ -12,7 +12,7 @@
 <?php include("view/sechedyfoot/encabezado.php")?>
 
 <div class="botsec">
-     <a href="./Index.php?ops=#" class="botonA">LECTURA QR</a>
+     <a href="./Index.php?ops=Qr" class="botonA">LECTURA QR</a>
     <a href="./Index.php?ops=ListUser"  class="botonB">REGISTRO DE USUARIO</a>
     <a href="./Index.php?ops=#"  class="botonC">CRONOGRAMA DEL CONGRESO</a>
 

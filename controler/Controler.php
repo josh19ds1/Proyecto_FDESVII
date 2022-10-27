@@ -46,6 +46,10 @@ class controlador{
 
         require("view/registropersonal.php");
     }
+    public function ScanQR(){
+
+        require("view/lectQR.php");
+    }
 
 
 
