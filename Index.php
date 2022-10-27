@@ -34,9 +34,9 @@ if (isset($_GET['ops'])){
             $control->cronograma();
 
 
-    }elseif($opcion=="Mapa"){
+    }elseif($opcion=="ListUser"){
 
-            $control->mapa();
+            $control->ListaUsuario();
 
     }elseif($opcion=="pagoexito"){
 

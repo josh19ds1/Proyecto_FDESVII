@@ -24,7 +24,7 @@ class controlador{
 
     public function Administracion(){
 
-        require("view/registropersonal.php");
+        require("view/MuAdmin.php");
 
     }   
 
@@ -40,6 +40,11 @@ class controlador{
     public function RegPago(){
 
         require("view/vistaRPago.php");
+    }
+
+    public function ListaUsuario(){
+
+        require("view/registropersonal.php");
     }
 
 

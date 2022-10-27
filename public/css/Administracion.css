@@ -1,0 +1,93 @@
+
+.botsec{
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+}
+
+.botonA {
+
+    background-color: #3D58F1;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', 'sans-seriff';
+    font-size: 20px;
+    padding:30px 60px;
+    margin-left: 5px;
+    text-align: center;
+    grid-column: 2/4;
+    position: absolute;
+    top: 54px;
+    max-height: 125px;
+    }
+
+.botonB{
+
+        background-color: #3D58F1;
+        color: white;
+        text-decoration: none;
+        font-family: 'Roboto', 'sans-seriff';
+        font-size: 20px;
+        max-height: 125px;
+        padding:30px 60px;
+        margin-left: 5px;
+        text-align: center;
+        grid-column: 5/7;
+        position: absolute;
+        top: 54px;
+ }
+
+        .botonC {
+
+            background-color: #3D58F1;
+            color: white;
+            text-decoration: none;
+            font-family: 'Roboto', 'sans-seriff';
+            font-size: 20px;
+            padding:30px 60px;
+            margin-left: 5px;
+            text-align: center;
+            grid-column: 8/10;
+            position: absolute;
+            top: 54px;
+            max-height: 125px;
+            }
+            
+.botonA:hover{
+background-color: #0D153A;
+    color: whitesmoke;
+    text-decoration: none;
+}    
+.botonB:hover{
+background-color: #0D153A;
+    color: whitesmoke;
+    text-decoration: none;
+}    
+.botonC:hover{
+background-color: #0D153A;
+    color: whitesmoke;
+    text-decoration: none;
+}    
+
+
+.imgShibi{
+    height: auto;
+    max-width: 267px;
+    position: absolute;
+    top: 341px;
+}
+
+.logUtp{
+
+max-width: 721px;
+position: fixed;
+margin-left: 752px;
+height: 580px;
+margin-top: -111px;
+z-index: -1;
+}
+
+img.logUtp{
+    opacity: 0.4;
+}
