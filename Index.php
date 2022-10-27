@@ -42,6 +42,10 @@ if (isset($_GET['ops'])){
 
             $control->ScanQR();
 
+    }elseif($opcion=="editCro"){
+
+            $control->EditCronograma();
+
     }elseif($opcion=="pagoexito"){
 
         $control-> PagoExitoso();

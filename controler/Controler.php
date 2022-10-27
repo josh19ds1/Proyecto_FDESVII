@@ -51,6 +51,11 @@ class controlador{
         require("view/lectQR.php");
     }
 
+    public function EditCronograma(){
+
+        require("view/editCrongrama.php");
+    }
+
 
 
 
