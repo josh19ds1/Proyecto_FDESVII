@@ -19,7 +19,7 @@
   <section>  
     <?php include("view/sechedyfoot/encabezado.php")?>
   </section>
-   <br><br><br>
+
 
 
    <section class="fondoutp">
