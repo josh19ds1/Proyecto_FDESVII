@@ -773,7 +773,7 @@ if (window.JotForm && JotForm.accessible) $('input_60').setAttribute('tabindex',
         <div id="cid_84" class="form-input-wide">
           <div class="divider" aria-label="Divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px">
           </div>
-          <button type="reset" value="Limpiar" onClick="toggleHidden5()">Limpiar</button>
+          <button type="reset" value="Limpiar" onClick="toggleHidden5()" id="borr">Limpiar</button>
         </div>
       </li>
         <li class="form-line" data-type="control_button" id="id_83">

@@ -308,3 +308,8 @@ function addOptions(domElement, array) {
   select.add(option);
  }
 }
+$(document).ready(function() {
+    $('#borr').click(function() {
+        $('#dist option').remove();
+    })
+});
