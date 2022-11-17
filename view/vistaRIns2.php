@@ -10,7 +10,6 @@
 <meta data-name="preventCloning" content="1">
 <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1499/1499993.png">
 <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/1499/1499993.png" />
-<link rel="canonical" href="https://form.jotform.com/222833629063861" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 <meta name="HandheldFriendly" content="true" />
 <title>Formato de inscripción </title>
@@ -20,6 +19,7 @@
 <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/5495102b700cc419478b4567.css?themeRevisionID=58d1cab53bf21c58d76dec92"/>
 <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.36355" />
 <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+<link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
 
 <style type="text/css">
 @import url('https://shots.jotform.com/elton/genericTheme.css');@import url(https://fonts.googleapis.com/css?family=Abel);
@@ -181,76 +181,6 @@
   /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
     /* Injected CSS Code */
 </style>
-<script>
-  function calcular(){
-select2 = document.getElementById("Pais");
-option2 = select2.options[select2.selectedIndex];
-select = document.getElementById("menu");
-option = select.options[select.selectedIndex];
-//document.getElementById('Rank').value = option2.text;
-caja = document.forms["registro"].elements;
-//subtotal = Number(caja["subtotal"].value);
-if(option.text == "Docente" && option2.value == "PA"){
-subtotal= 175;
-  dcto = 18/100;
-}else if(option.text == "Autor" && option2.value == "PA"){
-subtotal= 275;
-  dcto = 15 / 100;
-}else if(option.text == "Investigador" && option2.value == "PA"){
-  subtotal= 175;
-  dcto = 25 / 100;
-}else if(option.text == "Estudiante" && option2.value == "PA"){
-  subtotal= 125;
-  dcto = 18 / 100;
-}else if (option.text == "Estudiante") {
-  subtotal= 125;
-  dcto = 15 / 100;
-} else if (option.text == "Investigador") {
-subtotal= 175;
-  dcto = 20 / 100;
-} else if (option.text == "Autor") {
-subtotal= 275;
-  dcto = 10 / 100;
-} else if (option.text == "Docente") {
-subtotal= 175;
-  dcto = 15 / 100;
-}else {
-  dcto = 0;
-}
-caja["subtotal"].value = subtotal;
-caja["descuento"].value = dcto;
-total = subtotal - (subtotal * dcto);
-caja["total"].value = total;
-}
-function ComprobarClave(){
-    p1 = document.registro.passwrd.value;
-    p2 = document.registro.repasswrd.value;
-
-    if(p1 != p2){
-      alert("Ambas claves deben ser iguales.");
-      return false;
-    }
-  }
-  function hish(){
-
-sh = document.getElementById("DIEEE");
-opt = sh.options[sh.selectedIndex];
-if (opt.text == "Yes/Si") {
-  document.getElementById('CIE').style.visibility = "visible";
-}else{
-  document.getElementById('CIE').style.visibility = "hidden";
-}
-sh1 = document.getElementById("CAAEEE");
-opt1 = sh1.options[sh1.selectedIndex];
-if (opt1.text == "Yes/Si") {
-  document.getElementById('CAE').style.visibility = "visible";
-}else{
-  document.getElementById('CAE').style.visibility = "hidden";
-}
-
-}
-  
-  </script>
 <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.36355" type="text/javascript"></script>
 <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.36355" type="text/javascript"></script>
 <script src="https://cdn01.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.36355" type="text/javascript"></script>
@@ -266,7 +196,7 @@ if (opt1.text == "Yes/Si") {
 	JotForm.init(function(){
 	/*INIT-START*/
 if (window.JotForm && JotForm.accessible) $('input_54').setAttribute('tabindex',0);
-      JotForm.setPhoneMaskingValidator( 'input_52_full', '(###) ###-####' );
+      
 
  JotForm.calendarMonths = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
  JotForm.calendarDays = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
@@ -277,7 +207,7 @@ if (window.JotForm && JotForm.accessible) $('input_54').setAttribute('tabindex',
  } 
  JotForm.onTranslationsFetch(function() { JotForm.setCalendar("50", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":false,"past":false,"custom":false,"ranges":false,"start":"","end":""}); });
  JotForm.formatDate({date:(new Date()), dateField:$("id_"+50)});
-      JotForm.setPhoneMaskingValidator( 'input_53_full', '(###) ###-####' );
+      
       setTimeout(function() {
           $('input_6').hint('ex: myname@example.com');
        }, 20);
@@ -291,23 +221,18 @@ if (window.JotForm && JotForm.accessible) $('input_60').setAttribute('tabindex',
    languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("62", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
  } 
  JotForm.onTranslationsFetch(function() { JotForm.setCalendar("62", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); });
-      JotForm.setPhoneMaskingValidator( 'input_66_full', '(###) ###-####' );
       FormTranslation.init({"detectUserLanguage":"1","firstPageOnly":"0","options":"Español","originalLanguage":"es","primaryLanguage":"es","saveUserLanguage":"1","showStatus":"flag-with-nation","theme":"light-theme","version":"2"});
 	/*INIT-END*/
 	});
-
-   JotForm.prepareCalculationsOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Formato de Inscripcion UMA","type":"control_head"},null,{"name":"sexo","qid":"3","text":"Sexo","type":"control_dropdown"},{"name":"nombreDel","qid":"4","text":"Nombre del solicitante","type":"control_fullname"},null,{"name":"correoElectronico","qid":"6","text":"Correo Electronico","type":"control_email"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"fechaDe","qid":"24","text":"Fecha de Nacimiento","type":"control_birthdate"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"imagen","qid":"47","text":"Encabezado%20Formato%20en%20l%C3%ADnea.5cc734df8ff258.61037905","type":"control_image"},{"name":"carreraA","qid":"48","text":"Carrera a la que desea ingresar ","type":"control_dropdown"},{"name":"semestre","qid":"49","text":"Semestre ","type":"control_dropdown"},{"name":"fecha","qid":"50","text":"Fecha de Inscripcion","type":"control_datetime"},null,{"name":"telefonoCelular","qid":"52","text":"Telefono Celular","type":"control_phone"},{"name":"telefonoCasa","qid":"53","text":"Telefono Casa","type":"control_phone"},{"name":"curp","qid":"54","text":"CURP","type":"control_textbox"},{"name":"estadoCivil","qid":"55","text":"Estado Civil","type":"control_dropdown"},{"name":"lugarDe","qid":"56","text":"Lugar de Nacimiento","type":"control_address"},{"name":"direccionPermanente","qid":"57","text":"Direccion Permanente","type":"control_head"},null,{"name":"datosDe","qid":"59","text":"Datos de Estudios Anteriores","type":"control_head"},{"name":"nombreDe60","qid":"60","text":"Nombre de la Institucion Anterior","type":"control_textbox"},{"name":"direccion61","qid":"61","text":"Direccion","type":"control_address"},{"name":"fechaDe62","qid":"62","text":"Fecha de Terminacion","type":"control_datetime"},{"name":"datosDe63","qid":"63","text":"Datos de Padre o Tutor","type":"control_head"},{"name":"nombreDe64","qid":"64","text":"Nombre de Tutor","type":"control_fullname"},{"name":"direccionDe65","qid":"65","text":"Direccion de Tutor","type":"control_address"},{"name":"telefonoCelular66","qid":"66","text":"Telefono Celular de Tutor","type":"control_phone"},null,{"name":"sePagara68","qid":"68","text":"-Se pagara inscripcion y reinscripcion -Se pagaran 12 meses de colegiatura, el pago se realizara los dias 1  al 5 de cada mes. A partir del dia 6 se generara un cargo extra por pago atrasado.-No habra reembolso de ningun pago si el alumno solicita su baja voluntaria.","type":"control_radio"},{"name":"input69","qid":"69","type":"control_address"},{"name":"tags","qid":"70","text":"Tags","type":"control_checkbox"},{"name":"inscribe","qid":"71","text":"Inscribe","type":"control_dropdown"},{"name":"typeA","qid":"72","text":"Descuento en Inscripcion","type":"control_dropdown"},{"name":"descuentoEn73","qid":"73","text":"Descuento en Colegiatura","type":"control_dropdown"},null,{"name":"documentacion","qid":"75","text":"Documentacion","type":"control_checkbox"},{"name":"sePagara","qid":"76","text":"Me comprometo a entregar mi documentacion completa con un plazo maximo de 3 meses una vez iniciado el ciclo. De no ser asi causaria baja definitiva al programa al que me incribo.","type":"control_radio"},{"name":"clicPara","qid":"77","text":"Clic si el solicitante es de posgrado","type":"control_collapse"},null,{"name":"posgrado","qid":"79","text":"Posgrado","type":"control_radio"},null,null,{"name":"cicloEscolar","qid":"82","text":"Ciclo escolar ","type":"control_dropdown"},{"name":"enviar","qid":"83","text":"Enviar","type":"control_button"},{"name":"divisor","qid":"84","type":"control_divider"},{"name":"divisor85","qid":"85","type":"control_divider"},{"name":"divisor86","qid":"86","type":"control_divider"},{"name":"divisor87","qid":"87","type":"control_divider"},{"name":"enviar88","qid":"88","text":"Enviar","type":"control_button"},{"name":"divisor89","qid":"89","type":"control_divider"},{"name":"separadorPagina","qid":"90","text":"Separador pagina","type":"control_pagebreak"},{"name":"separadorPagina91","qid":"91","text":"Separador pagina","type":"control_pagebreak"}]);
-   setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Formato de Inscripcion UMA","type":"control_head"},null,{"name":"sexo","qid":"3","text":"Sexo","type":"control_dropdown"},{"name":"nombreDel","qid":"4","text":"Nombre del solicitante","type":"control_fullname"},null,{"name":"correoElectronico","qid":"6","text":"Correo Electronico","type":"control_email"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"fechaDe","qid":"24","text":"Fecha de Nacimiento","type":"control_birthdate"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"imagen","qid":"47","text":"Encabezado%20Formato%20en%20l%C3%ADnea.5cc734df8ff258.61037905","type":"control_image"},{"name":"carreraA","qid":"48","text":"Carrera a la que desea ingresar ","type":"control_dropdown"},{"name":"semestre","qid":"49","text":"Semestre ","type":"control_dropdown"},{"name":"fecha","qid":"50","text":"Fecha de Inscripcion","type":"control_datetime"},null,{"name":"telefonoCelular","qid":"52","text":"Telefono Celular","type":"control_phone"},{"name":"telefonoCasa","qid":"53","text":"Telefono Casa","type":"control_phone"},{"name":"curp","qid":"54","text":"CURP","type":"control_textbox"},{"name":"estadoCivil","qid":"55","text":"Estado Civil","type":"control_dropdown"},{"name":"lugarDe","qid":"56","text":"Lugar de Nacimiento","type":"control_address"},{"name":"direccionPermanente","qid":"57","text":"Direccion Permanente","type":"control_head"},null,{"name":"datosDe","qid":"59","text":"Datos de Estudios Anteriores","type":"control_head"},{"name":"nombreDe60","qid":"60","text":"Nombre de la Institucion Anterior","type":"control_textbox"},{"name":"direccion61","qid":"61","text":"Direccion","type":"control_address"},{"name":"fechaDe62","qid":"62","text":"Fecha de Terminacion","type":"control_datetime"},{"name":"datosDe63","qid":"63","text":"Datos de Padre o Tutor","type":"control_head"},{"name":"nombreDe64","qid":"64","text":"Nombre de Tutor","type":"control_fullname"},{"name":"direccionDe65","qid":"65","text":"Direccion de Tutor","type":"control_address"},{"name":"telefonoCelular66","qid":"66","text":"Telefono Celular de Tutor","type":"control_phone"},null,{"name":"sePagara68","qid":"68","text":"-Se pagara inscripcion y reinscripcion -Se pagaran 12 meses de colegiatura, el pago se realizara los dias 1  al 5 de cada mes. A partir del dia 6 se generara un cargo extra por pago atrasado.-No habra reembolso de ningun pago si el alumno solicita su baja voluntaria.","type":"control_radio"},{"name":"input69","qid":"69","type":"control_address"},{"name":"tags","qid":"70","text":"Tags","type":"control_checkbox"},{"name":"inscribe","qid":"71","text":"Inscribe","type":"control_dropdown"},{"name":"typeA","qid":"72","text":"Descuento en Inscripcion","type":"control_dropdown"},{"name":"descuentoEn73","qid":"73","text":"Descuento en Colegiatura","type":"control_dropdown"},null,{"name":"documentacion","qid":"75","text":"Documentacion","type":"control_checkbox"},{"name":"sePagara","qid":"76","text":"Me comprometo a entregar mi documentacion completa con un plazo maximo de 3 meses una vez iniciado el ciclo. De no ser asi causaria baja definitiva al programa al que me incribo.","type":"control_radio"},{"name":"clicPara","qid":"77","text":"Clic si el solicitante es de posgrado","type":"control_collapse"},null,{"name":"posgrado","qid":"79","text":"Posgrado","type":"control_radio"},null,null,{"name":"cicloEscolar","qid":"82","text":"Ciclo escolar ","type":"control_dropdown"},{"name":"enviar","qid":"83","text":"Enviar","type":"control_button"},{"name":"divisor","qid":"84","type":"control_divider"},{"name":"divisor85","qid":"85","type":"control_divider"},{"name":"divisor86","qid":"86","type":"control_divider"},{"name":"divisor87","qid":"87","type":"control_divider"},{"name":"enviar88","qid":"88","text":"Enviar","type":"control_button"},{"name":"divisor89","qid":"89","type":"control_divider"},{"name":"separadorPagina","qid":"90","text":"Separador pagina","type":"control_pagebreak"},{"name":"separadorPagina91","qid":"91","text":"Separador pagina","type":"control_pagebreak"}]);}, 20); 
 </script>
 </head>
-<body onload="hish()">
+<body >
 <?php include("secciones/headerRIns.php")?>
 <section style="background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../public/src/1.jpg);">
-<form class="jotform-form" action="https://submit.jotform.com/submit/222833629063861/" method="post" name="registro" id="registro" accept-charset="utf-8" autocomplete="on" onload="hish1()">
+<form class="jotform-form" action="" method="post" name="registro" id="registro" accept-charset="utf-8" autocomplete="on" >
   <input type="hidden" name="formID" value="222833629063861" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -354,15 +279,15 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <div id="cid_4" class="form-input-wide jf-required">
           <div data-wrapper-react="true" class="extended">
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-              <input type="text" id="first" name="first" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_4 given-name" size="10" value="" data-component="first" aria-labelledby="label_4 sublabel_4_first" required="" />
+              <input type="text" id="first" name="first" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_4 given-name" size="10" value="" data-component="first" aria-labelledby="label_4 sublabel_4_first" minlength="5" maxlength="40" required pattern="[A-Za-z0-9]+" />
               <label class="form-sub-label" for="first_4" id="sublabel_4_first" style="min-height:13px" aria-hidden="false"> Apellido Paterno </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle">
-              <input type="text" id="middle" name="middle" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 additional-name" size="10" value="" data-component="middle" aria-labelledby="label_4 sublabel_4_middle" required="" />
+              <input type="text" id="middle" name="middle" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 additional-name" size="10" value="" data-component="middle" aria-labelledby="label_4 sublabel_4_middle" minlength="5" maxlength="40" required pattern="[A-Za-z0-9]+" />
               <label class="form-sub-label" for="middle_4" id="sublabel_4_middle" style="min-height:13px" aria-hidden="false"> Apellido Materno </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
-              <input type="text" id="last" name="last" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" data-component="last" aria-labelledby="label_4 sublabel_4_last" required="" />
+              <input type="text" id="last" name="last" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" data-component="last" aria-labelledby="label_4 sublabel_4_last" minlength="5" maxlength="40" required pattern="[A-Za-z0-9]+" />
               <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nombre(s) </label>
             </span>
           </div>
@@ -371,7 +296,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
       <li class="form-line form-line-column form-col-1" data-type="control_dropdown" id="id_82">
         <label class="form-label form-label-top" id="label_82" for="input_82"> Ocupación </label>
         <div id="cid_82" class="form-input-wide">
-          <select class="form-dropdown" id="menu" name="menu" style="width:20px" data-component="dropdown" onChange="calcular()">
+          <select class="form-dropdown" id="menu" name="menu" style="width:20px" data-component="dropdown" onChange="calcular()" required>
             <option value=" " >Escoja su Posición</option>
         <option value="0" >Estudiante</option>
         <option value="1" >Investigador</option>
@@ -388,7 +313,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
           </span>
         </label>
         <div id="cid_48" class="form-input-wide jf-required">
-          <select class="form-dropdown validate[required]" name="DIEEE" id="DIEEE" onChange="hish()" style="width:500px" data-component="dropdown" required="">
+          <select class="form-dropdown validate[required]" name="DIEEE" id="DIEEE" style="width:500px" data-component="dropdown" onChange="toggleHidden('#CIE')">
             <option value="" selected disabled hidden>Choose here</option>
             <option value="0" >No</option>
             <option value="1" >Yes/Si</option>
@@ -403,99 +328,24 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
           </span>
         </label>
         <div id="cid_49" class="form-input-wide jf-required">
-          <input type="text"  id="ced" name="ced" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="41" value="" data-component="textbox" aria-labelledby="label_54">
+          <input type="text"  id="ced" name="ced" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="41" value="" placeholder="Ejemplo: 000-0000-00000(E20-0899-00979)" data-component="textbox" aria-labelledby="label_54" minlength="8" maxlength="11" pattern="[0-9]{3}-[0-9]{4}-[0-9]{5}" required>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-4" data-type="control_textbox" id="CIE" style="visibility:hidden;">
+      <li class="form-line form-line-column form-col-4" data-type="control_textbox" id="CIE" hidden>
         <label class="form-label form-label-top" id="label_54" for="input_54"> Codigo de IEEE </label>
         <div id="cid_54" class="form-input-wide" >
-          <input type="text" id="input_54" name="q54_curp" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_54" />
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-5 jf-required" data-type="control_dropdown" id="id_55">
-        <label class="form-label form-label-top" id="label_55" for="input_55">
-          Contraseña:
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_4" class="form-input-wide jf-required">
-          <input type="password" id="passwrd" name="passwrd" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="41" value="" data-component="password" aria-labelledby="label_54" />
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-6 jf-required" data-type="control_phone" id="id_52">
-        <label class="form-label form-label-top" id="label_52" for="input_52_full">
-          Ingrese Nuevamente la contraseña
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_52" class="form-input-wide jf-required">
-          <span class="form-sub-label-container" style="vertical-align:top">
-            <input type="password" id="repasswrd" name="repasswrd" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_52 tel-national" data-masked="true" value="" data-component="password" aria-labelledby="label_52" required="" />
-            <label class="form-sub-label" for="input_52_full" id="sublabel_52_masked" style="min-height:13px" aria-hidden="false">  </label>
-          </span>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-7" data-type="control_datetime" id="id_50">
-        <label class="form-label form-label-top" id="label_50" for="lite_mode_50"> Fecha de Inscripción </label>
-        <div id="cid_50" class="form-input-wide">
-          <div data-wrapper-react="true">
-            <div style="display:none">
-              <span class="form-sub-label-container" style="vertical-align:top">
-                <input type="tel" class="currentDate form-textbox validate[limitDate]" id="day_50" name="q50_fecha[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="11" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_day" />
-                <span class="date-separate" aria-hidden="true">
-                   -
-                </span>
-                <label class="form-sub-label" for="day_50" id="sublabel_50_day" style="min-height:13px" aria-hidden="false"> Día </label>
-              </span>
-              <span class="form-sub-label-container" style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[limitDate]" id="month_50" name="q50_fecha[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="10" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_month" />
-                <span class="date-separate" aria-hidden="true">
-                   -
-                </span>
-                <label class="form-sub-label" for="month_50" id="sublabel_50_month" style="min-height:13px" aria-hidden="false"> Mes </label>
-              </span>
-              <span class="form-sub-label-container" style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[limitDate]" id="year_50" name="q50_fecha[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2022" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_year" />
-                <label class="form-sub-label" for="year_50" id="sublabel_50_year" style="min-height:13px" aria-hidden="false"> Año </label>
-              </span>
-            </div>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_50" size="12" data-maxlength="12" maxLength="12" data-age="" value="11-10-2022" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_litemode" />
-              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_50_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
-              <label class="form-sub-label" for="lite_mode_50" id="sublabel_50_litemode" style="min-height:13px" aria-hidden="false"> Fecha </label>
-            </span>
-          </div>
+          <input type="text" id="input_54" name="q54_curp" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_54" minlength="5" maxlength="50" pattern="[A-Za-z0-9]+" />
         </div>
       </li>
       <li class="form-line form-line-column form-col-2 jf-required" data-type="control_dropdown" id="id_48">
-        <label class="form-label form-label-top" id="label_48" for="input_48">
-          Sexo
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_48" class="form-input-wide jf-required">
-          <select class="form-dropdown validate[required]" name="Sexo" id="Sexo" style="width:500px" data-component="dropdown" required="">
-            <option value=" " >Escoja su Sexo</option>
-        <option value="0" >Masculino</option>
-        <option value="1" >Femenino</option>
-        <option value="2" >Transformer</option>
-        <option value="3" >Helicoptero Apache</option>
-        <option value="4" >Otros</option>
-          </select>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-5 jf-required" data-type="control_dropdown" id="id_3">
-        <label class="form-label form-label-top" id="label_3" for="input_3">
+      <label class="form-label form-label-top" id="label_3" for="input_3">
           Pais
           <span class="form-required">
             *
           </span>
         </label>
         <div id="cid_3" class="form-input-wide jf-required">
-          <select class="form-dropdown validate[required]" data-flag="true" id="Pais" name="Pais" onChange="calcular()" style="width:400px" data-component="dropdown" required="">
+          <select class="form-dropdown validate[required]" data-flag="true" id="Pais" name="Pais" onChange="toggleHidden3('#provin1'),calcular()" style="width:400px" data-component="dropdown" required>
             <option value="  " selected>Select el País</option>
             <option value="EX">Extranjero</option>
             <option value="AF">Afghanistan</option>
@@ -740,6 +590,96 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
           </select>
         </div>
       </li>
+      <li class="form-line form-line-column form-col-5 jf-required" data-type="control_dropdown" id="provin1" hidden>
+      <label class="form-label form-label-top" id="label_48" for="input_48">
+          Provincia
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_480" class="form-input-wide jf-required">
+          <select class="form-dropdown validate[required]" name="prov" id="prov" style="width:500px" data-component="dropdown" onChange="toggleHidden4('#dist1')" required> 
+            <option value=" " >Escoja la Provincia</option>
+        <option value="1" >Bocas del Toro</option>
+        <option value="2" >Coclé</option>
+        <option value="3" >Colón</option>
+        <option value="4" >Chiriquí</option>
+        <option value="5" >Darién</option>
+        <option value="6" >Herrera</option>
+        <option value="7" >Los Santos</option>
+        <option value="8" >Panamá</option>
+        <option value="9" >Veraguas</option>
+        <option value="10" >Panamá Oeste</option>
+        <option value="11" >Emberá-Wounaan</option>
+        <option value="12" >Guna Yala</option>
+        <option value="13" >Naso Tjër Di</option>
+        <option value="14" >Ngäbe-Buglé</option>
+          </select>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-5 jf-required" data-type="control_dropdown" id="dist1" hidden>
+      <label class="form-label form-label-top" id="label_48" for="input_48">
+          Distrito
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_480" class="form-input-wide jf-required">
+          <select class="form-dropdown validate[required]" name="dist" id="dist" style="width:500px" data-component="dropdown" required> 
+            <option value=" " >Escoja el Distrito</option>
+          </select>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-7" data-type="control_datetime" id="id_50">
+        <label class="form-label form-label-top" id="label_50" for="lite_mode_50"> Fecha de Inscripción </label>
+        <div id="cid_50" class="form-input-wide">
+          <div data-wrapper-react="true">
+            <div style="display:none">
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <input type="tel" class="currentDate form-textbox validate[limitDate]" id="day_50" name="q50_fecha[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="11" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_day" />
+                <span class="date-separate" aria-hidden="true">
+                   -
+                </span>
+                <label class="form-sub-label" for="day_50" id="sublabel_50_day" style="min-height:13px" aria-hidden="false"> Día </label>
+              </span>
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <input type="tel" class="form-textbox validate[limitDate]" id="month_50" name="q50_fecha[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="10" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_month" />
+                <span class="date-separate" aria-hidden="true">
+                   -
+                </span>
+                <label class="form-sub-label" for="month_50" id="sublabel_50_month" style="min-height:13px" aria-hidden="false"> Mes </label>
+              </span>
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <input type="tel" class="form-textbox validate[limitDate]" id="year_50" name="q50_fecha[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2022" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_year" />
+                <label class="form-sub-label" for="year_50" id="sublabel_50_year" style="min-height:13px" aria-hidden="false"> Año </label>
+              </span>
+            </div>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_50" size="12" data-maxlength="12" maxLength="12" data-age="" value="11-10-2022" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" autoComplete="section-input_50 off" aria-labelledby="label_50 sublabel_50_litemode" />
+              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_50_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+              <label class="form-sub-label" for="lite_mode_50" id="sublabel_50_litemode" style="min-height:13px" aria-hidden="false"> Fecha </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-2 jf-required" data-type="control_dropdown" id="id_48">
+        <label class="form-label form-label-top" id="label_48" for="input_48">
+          Sexo
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_48" class="form-input-wide jf-required">
+          <select class="form-dropdown validate[required]" name="Sexo" id="Sexo" style="width:500px" data-component="dropdown" required>
+            <option value=" " >Escoja su Sexo</option>
+        <option value="0" >Masculino</option>
+        <option value="1" >Femenino</option>
+        <option value="2" >Transformer</option>
+        <option value="3" >Helicoptero Apache</option>
+        <option value="4" >Otros</option>
+          </select>
+        </div>
+      </li>
       <li class="form-line jf-required" data-type="control_address" id="id_56">
         <label class="form-label form-label-top" id="label_56" for="input_56_city">
           Ubicación
@@ -750,26 +690,14 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <div id="cid_56" class="form-input-wide jf-required">
           <div summary="" class="form-address-table jsTest-addressField">
             <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none">
-              <span class="form-address-line form-address-street-line jsTest-address-lineField">
-                <span class="form-sub-label-container" style="vertical-align:top">
-                  <input type="text" id="Ciudad1" placeholder="Ciudad1" name="Ciudad1" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_56 address-line1" value="" data-component="address_line_1" aria-labelledby="label_56 sublabel_56_addr_line1" />
-                  <label class="form-sub-label" for="input_56_addr_line1" id="sublabel_56_addr_line1" style="min-height:13px" aria-hidden="false"> Dirección de la calle </label>
-                </span>
-              </span>
             </div>
             <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none">
-              <span class="form-address-line form-address-street-line jsTest-address-lineField">
-                <span class="form-sub-label-container" style="vertical-align:top">
-                  <input type="text" id="Ciudad2" placeholder="Ciudad2" name="Ciudad2" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_56 off" value="" data-component="address_line_2" aria-labelledby="label_56 sublabel_56_addr_line2" />
-                  <label class="form-sub-label" for="input_56_addr_line2" id="sublabel_56_addr_line2" style="min-height:13px" aria-hidden="false"> Dirección de la calle Línea 2 </label>
-                </span>
-              </span>
             </div>
             <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
               <span class="form-address-line form-address-city-line jsTest-address-lineField ">
                 <span class="form-sub-label-container" style="vertical-align:top">
                   <input type="text" id="Ciudad" placeholder="Ciudad" name="Ciudad" class="form-textbox validate[required] form-address-city" data-defaultvalue="" autoComplete="section-input_56 address-level2" value="" data-component="city" aria-labelledby="label_56 sublabel_56_city" required="" />
-                  <label class="form-sub-label" for="input_56_city" id="sublabel_56_city" style="min-height:13px" aria-hidden="false"> Ciudad </label>
+                  <label class="form-sub-label" for="input_56_city" id="sublabel_56_city" style="min-height:11px" aria-hidden="false"> Dirección </label>
                   <label class="form-label form-label-top" id="CAA" for="CAAEEE">
           Tiene un articulo aprobado?
           <span class="form-required">
@@ -777,15 +705,15 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
           </span>
         </label>
         <div id="cid_48" class="form-input-wide jf-required">
-          <select class="form-dropdown validate[required]" name="CAAEEE" id="CAAEEE" onChange="hish()" style="width:410px" data-component="dropdown" required="">
+          <select class="form-dropdown validate[required]" name="CAAEEE" id="CAAEEE" onChange="toggleHidden2('#CAE')" style="width:410px" data-component="dropdown">
             <option value="" selected disabled hidden>Choose here</option>
             <option value="0" >No</option>
             <option value="1" >Yes/Si</option>
           </select>
         </div>    
-        <div id="CAE" name="CAE" class="form-input-wide" >
+        <div id="CAE" name="CAE" class="form-input-wide" hidden>
         <label class="form-label form-label-top" id="label_5400" for="input_5400"> Codigo de Articulo Aprobado </label>
-          <input type="text" id="input_5400" name="input_5400" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_54" />
+          <input type="text" id="input_5400" name="input_5400" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_54" pattern="[A-Za-z0-9]+"/>
         </div>
                 </span>
               </span>
@@ -819,7 +747,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <label class="form-label form-label-top" id="label_53" for="input_53_full"> Telefono</label>
         <div id="cid_53" class="form-input-wide">
           <span class="form-sub-label-container" style="vertical-align:top">
-            <input type="tel" id="Telf" placeholder="Telefono" name="Telf" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_53 tel-national" data-masked="true" value="" data-component="phone" aria-labelledby="label_53" />
+            <input type="tel" id="Telf" name="Telf" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" placeholder="Ejemplo: 507-6789-6789" data-defaultvalue="" autoComplete="section-input_53 tel-national" data-masked="true" value="" data-component="phone" aria-labelledby="label_53" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" />
             <label class="form-sub-label" for="input_53_full" id="sublabel_53_masked" style="min-height:13px" aria-hidden="false">  </label>
           </span>
         </div>
@@ -845,14 +773,14 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <div id="cid_84" class="form-input-wide">
           <div class="divider" aria-label="Divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px">
           </div>
-          <button class="" type="reset" value="Limpiar">Limpiar</button>
+          <button type="reset" value="Limpiar" onClick="toggleHidden5()">Limpiar</button>
         </div>
       </li>
         <li class="form-line" data-type="control_button" id="id_83">
           <div id="cid_83" class="form-input-wide">
             <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
               <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="button"><a href="./" class="ml-2" style="text-decoration: none">Volver</a></button>
-            <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="submit" onClick="ComprobarClave()" value="Aceptar" ><a href="?op=RPago" style="text-decoration: none">Inscribir</a></button>
+            <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="submit" onClick="ComprobarClave()" value="Aceptar" >Inscribir</button>
             </div>
           </div>
         </li>
@@ -894,5 +822,7 @@ for (var i = 0; i < all_spc.length; i++)
     </div>
   </div>
 </form></body>
-</html>
+<script src="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/js/bootstrap-select-country.min.js"></script>
+<script type="text/javascript" src="../public/javascript/main.js"></script>
 <script type="text/javascript">JotForm.ownerView=true;</script>
+</html>

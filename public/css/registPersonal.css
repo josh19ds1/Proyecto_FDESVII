@@ -1,0 +1,33 @@
+
+h1{
+    text-align: center;
+    margin-top: 25px;
+}
+table{
+    margin-top: 25px;
+margin-left: 25px;
+border-collapse: collapse;
+}
+th{
+
+    font-size: 20px;
+    font-size:  'Roboto', sans-serif;
+    background-color: #0D153A;
+    color:white;
+}
+
+
+td{
+    font-size: 20px;
+    font-size:  'Roboto', sans-serif;
+    color: rgb(250, 245, 245);
+    background-color:  #3D58F1;
+
+}
+
+.imgedit{
+    margin-left: 5px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,25 @@
+Nombres de los datos en el formulario sus ID
+Formulario ID: registro
+Apellido Paterno:first
+Apellido Materno:middle
+Nombres:last
+Select Ocupacion:menu
+Cedula:ced
+codigo de miembro IEEE a validar en la BD:input_54
+contraseña:passwrd
+recontraseña:repasswrd 
+Fecha de Inscripción:day_50 innesesario creo que mejor borrar esta parte del registro
+select sexo:Sexo
+select pais:Pais
+ciudad:ciudad
+dirrecion1:ciudad1
+dirrecion2:ciudad2
+codigo del articulo que haya sido aprobado validar:input_5400
+Institución/Entidad/Universidad:IEU
+Unidad/Departamento/Facultad:UDF
+Costo de Inscripción:
+subtotal:subtotal
+descuento:descuento
+total:total
+Telefono:Telf
+email:email

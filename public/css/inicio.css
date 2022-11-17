@@ -1,0 +1,93 @@
+
+.formulario{
+
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(11,1fr);
+}
+
+.Boton{
+    /*caja*/
+ color:#fff;
+ background-color: #3D58F1;
+ padding: 50px 10px;
+ margin-top: 10px;
+ /*texto*/
+ text-decoration: none;
+ font-size: 52px;
+ font-size: 'Roboto', 'sans-seriff';
+ text-align: center;
+ font-weight: bolder;
+ /*posicion*/
+ position: absolute;
+ bottom: 178px;
+ left: 163px;
+ border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
+}
+.Boton:hover {
+    background-color: #0D153A;
+    color: #E1F3F5;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
+}
+
+
+
+
+h1{
+text-align: center;
+
+color: black;
+
+
+}
+
+
+.sec{
+position: relative;
+display: grid;
+grid-template-columns: repeat(6,1fr);
+align-items: center;
+}
+
+.imagen1{
+
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    left: 25px;
+    grid-column: 1/3;
+
+}
+.imagen2{
+
+  width: 100%;
+  height: 150x;
+  object-fit: cover;
+  margin-top: 2px;
+ 
+}
+.novedades{
+    display: block;
+    margin: 10px auto;
+    max-width: 300px;
+    width: 300px!important;
+    text-align: center;
+    padding-bottom: 1em;
+    position: relative;
+    grid-column: 5/7;
+
+}
+
+
+

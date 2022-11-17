@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+    size-adjust: 25px;
+}
+
+
+.imagen1{
+    max-width: 400px;
+    position: relative;
+    margin-left: 453px;
+}
+
+
+.secbtn{
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(13,1fr);
+    margin-bottom: 65px;
+
+}
+
+.botonScA{
+    background-color: #3D58F1;
+    color: white;
+    padding:12px 41px;
+    position: absolute;
+    text-decoration: none; 
+    grid-column: 4/5;
+    
+ 
+}
+.botonScB{
+    background-color: #3D58F1;
+    color:white;
+    text-decoration: none; 
+    padding:12px 41px;
+    grid-column: 9/12;
+    position: absolute;
+}
+
+.botonScA:hover{
+    background-color: #0D153A;
+    color: white;
+    text-decoration: none;
+
+   
+}
+.botonScB:hover{
+    background-color: #0D153A;
+    color: white;
+    text-decoration: none;
+
+   
+}
