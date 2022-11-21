@@ -5,6 +5,8 @@
 // *                               */
 // *********************************/
 
+require_once 'model/db.php';
+
 // Metodo donde llevara a la demás páginas
 
 require('controler/Controler.php');
@@ -25,7 +27,15 @@ if (isset($_GET['ops'])){
 
             $control -> RegPago();
 
-    }elseif($opcion=="Admin"){
+        }
+        elseif ($opcion=="registrar"){
+    
+        //Llamo al método ver pasándole la clave que me están pidiendo
+    
+        $control->Guardar();
+        }
+        elseif($opcion=="Admin")
+        {
 
           $control->Administracion();
 
