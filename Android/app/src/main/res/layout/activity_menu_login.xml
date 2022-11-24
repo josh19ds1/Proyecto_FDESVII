@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+    android:background="@drawable/background_color"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="25dp"
+        >
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:src="@drawable/dinersol"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/white"
+            android:background="@drawable/round_outline"
+            android:backgroundTint="#51034f"
+            android:radius="10dp"
+            android:clipToOutline="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sistema De Cafetería UTP"
+                android:textColor="#ffffff"
+                android:textFontWeight="900"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textStyle="italic"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:id="@+id/txtNombreLogin"
+            android:gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp">
+
+                <EditText
+                    android:id="@+id/TextInputNombre"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:hint="Nombre"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff"
+                    android:backgroundTint="#ffffff"
+                    android:singleLine="true"
+                    android:layout_gravity="center_horizontal"/>
+
+                <EditText
+                    android:id="@+id/TextInputApellido"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:hint="Apellido"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff"
+                    android:backgroundTint="#ffffff"
+                    android:singleLine="true"
+                    android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/logo_utp"
+            android:background="@drawable/rounded_item"
+            android:backgroundTint="@color/white"
+            android:onClick="Utp"/>
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/logo_fisc"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rounded_item"
+            android:backgroundTint="@color/white"
+            android:onClick="UtpFisc"/>
+
+    </LinearLayout>
+
+</LinearLayout>
