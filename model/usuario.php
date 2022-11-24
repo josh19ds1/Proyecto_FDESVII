@@ -83,7 +83,7 @@ class Usuario
 	{
 		try
 		{
-			$stm = $this->pdo->prepare("SELECT * FROM usuario WHERE email = ? AND pass=?");
+			$stm = $this->pdo->prepare("SELECT * FROM coladm WHERE email = ? AND pass=?");
 			$stm->execute(array($data->email, $data->pass));
 			return $stm->fetch(PDO::FETCH_OBJ);
 		} catch (Exception $e) 
@@ -97,7 +97,7 @@ class Usuario
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT * FROM usuario WHERE id = ?");
+			          ->prepare("SELECT * FROM coladm WHERE id = ?");
 			          
 
 			$stm->execute(array($id));
@@ -107,7 +107,19 @@ class Usuario
 			die($e->getMessage());
 		}
 	}
-
+	public function ObtenerUsuario()
+	{
+		try 
+		{
+			$stm = $this->pdo->prepare("SELECT * FROM usuario ORDER BY id DESC LIMIT 1");
+			          
+			$stm->execute();
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
 	public function ObtenerTodosLosUsuarios()
 	{
 		try 
@@ -121,26 +133,37 @@ class Usuario
 			die($e->getMessage());
 		}
 	}
+	
+	public function ConsultarEmail($email)
+	{
+		try
+		{
+			$stm = $this->pdo->prepare("SELECT * FROM usuario WHERE email = ?");
+			$stm->execute(array($email));
+			return $stm->fetch(PDO::FETCH_OBJ);
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
 
-	public function Actualizar(usuario $data)
+	public function IncluirHash(usuario $data)
 	{
 		try 
 		{
-		$sql = "UPDATE usuario SET nombre = ?,apellidoP= ? 
-		        WHERE id = ?";
+		$sql = "UPDATE usuario SET restablecer = ?";
 
 		$this->pdo->prepare($sql)
 		     ->execute(
 				array( 
-                    $data->nombre,
-                    $data->apellido,
-					$data->id
+                    $data->restablecer,
+					$data->email
                 )
 			);
-		$this->msg="Su registro se ha Actualizado exitosamente!&t=text-success";
+			$this->msg="ok";
 		} catch (Exception $e) 
 		{
-			$this->msg="Error al actualizar los datos&t=text-danger";
+			$this->msg="Error";
 
 		}
 		return $this->msg;

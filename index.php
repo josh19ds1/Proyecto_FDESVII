@@ -39,7 +39,41 @@ if (isset($_GET['ops'])){
 
           $control->Administracion();
 
-    }elseif($opcion=="Cronograma"){
+    }elseif ($opcion=="acceder"){
+
+        //Llamo al método ver pasándole la clave que me están pidiendo
+    
+        $control->Ingresar();
+     }
+    elseif ($opcion=="permitido"){
+
+        //Llamo al método ver pasándole la clave que me están pidiendo
+    
+        $control->IngresarPanel();
+    }
+    elseif ($opcion=="perfil11"){
+
+        //Llamo al método ver pasándole la clave que me están pidiendo
+    
+        $control->IngresarPerfil();
+    }
+    elseif ($opcion=="salir"){
+
+        //Llamo al método ver pasándole la clave que me están pidiendo
+        session_destroy();
+        $control->Index();
+    }elseif ($opcion=="restablecer"){
+
+        //Llamo al método para ver la vista de restablecer la contraseña
+        $control->RestablecerPass();
+    }
+    elseif ($opcion=="email"){
+
+        //Llamo al método para ver la vista de restablecer la contraseña
+        $control->Correo();
+    }
+    
+    elseif($opcion=="Cronograma"){
 
             $control->cronograma();
 

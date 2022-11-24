@@ -331,4 +331,55 @@ function calcular(){
 		for(i = L; i >= 0; i--) {
 		   selectElement.remove(i);
 		}
-	 }
+	 }function validar(){
+
+		/*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
+		y que se convertirá en false(falso) cuando la condición no se cumpla*/
+		var todo_correcto = true;
+		
+		/*El primer campo a comprobar es el del nombre. Lo traemos por id y verificamos
+		la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
+		para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
+		devolverá false.*/
+		
+		if(document.getElementById('nombre').value.length < 2 ){
+			todo_correcto = false;
+			alert('El campo nombre esta incompleto, vuelva a revisarlos');
+		}
+		if(document.getElementById('apellido').value.length < 2 ){
+			todo_correcto = false;
+			alert('El campo apellido esta incompleto, vuelva a revisarlos');
+		}
+		
+		/*Para comprobar el email haremos uso de una expresión regular. Esto es una secuencia
+		de caracteres que nos dirá si el valor ingresado por el usuario tiene estructura de
+		correo electrónico. Lo que hacemos es obtener el value del campo de texto destinado
+		al email, y le aplicamos el método test() del objeto global RegExp(que nos permite
+		trabajar con expresiones regulares).*/
+		var expresion = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+		var email = document.getElementById('email').value;
+		if (!expresion.test(email)){
+			todo_correcto = false;
+			alert('El campo email esta incompleto, vuelva a revisarlos');
+		}
+		
+		/*Para validar el select debemos añadir un value distinto a cada option. En el
+		código, he asignado un value con  valor vacío al primer option. Los siguientes,
+		al no estar definidos toman el valor por defecto. Por tanto, si todos tienen value,
+		lo único que tenemos que comprobar es que este no sea vacío. Si es vacío, todo_correcto
+		será false.*/
+		if(document.getElementById('ocupacion').value == ''){
+			todo_correcto = false;
+			alert('El campo ocupacion esta incompleto, vuelva a revisarlos');
+		}
+		
+		/*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
+		todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
+		al usuario de que algunos datos ingresados no son los que esperamos.*/
+		if(!todo_correcto){
+		alert('Algunos campos no están correctos, vuelva a revisarlos');
+		}
+		
+		return todo_correcto;
+		}
+	

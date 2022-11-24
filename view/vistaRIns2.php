@@ -182,14 +182,78 @@
     /* Injected CSS Code */
 </style>
 <script>
+  function valtef(){
+		var phone_input = document.getElementById("telefono");
+
+		phone_input.addEventListener('input', () => {
+		phone_input.setCustomValidity('');
+		phone_input.checkValidity();
+		});
+
+		phone_input.addEventListener('invalid', () => {
+		if(phone_input.value === '') {
+			phone_input.setCustomValidity('Enter phone number!');
+		} else {
+			phone_input.setCustomValidity('Enter phone number in this format: 123-456-7890');
+		}
+		});}
+  function validar(){
+
+/*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
+y que se convertirá en false(falso) cuando la condición no se cumpla*/
+var todo_correcto = true;
+
+/*El primer campo a comprobar es el del nombre. Lo traemos por id y verificamos
+la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
+para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
+devolverá false.*/
+
+if(document.getElementById('nombre').value.length < 2 ){
+    todo_correcto = false;
+    alert('El campo nombre esta incompleto, vuelva a revisarlos');
+}
+if(document.getElementById('apellido').value.length < 2 ){
+    todo_correcto = false;
+    alert('El campo apellido esta incompleto, vuelva a revisarlos');
+}
+
+/*Para comprobar el email haremos uso de una expresión regular. Esto es una secuencia
+de caracteres que nos dirá si el valor ingresado por el usuario tiene estructura de
+correo electrónico. Lo que hacemos es obtener el value del campo de texto destinado
+al email, y le aplicamos el método test() del objeto global RegExp(que nos permite
+trabajar con expresiones regulares).*/
+var expresion = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+var email = document.getElementById('email').value;
+if (!expresion.test(email)){
+    todo_correcto = false;
+    alert('El campo email esta incompleto, vuelva a revisarlos');
+}
+/*Para validar el select debemos añadir un value distinto a cada option. En el
+código, he asignado un value con  valor vacío al primer option. Los siguientes,
+al no estar definidos toman el valor por defecto. Por tanto, si todos tienen value,
+lo único que tenemos que comprobar es que este no sea vacío. Si es vacío, todo_correcto
+será false.*/
+if(document.getElementById('ocupacion').value == ''){
+    todo_correcto = false;
+    alert('El campo ocupacion esta incompleto, vuelva a revisarlos');
+}
+
+/*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
+todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
+al usuario de que algunos datos ingresados no son los que esperamos.*/
+if(!todo_correcto){
+alert('Algunos campos no están correctos, vuelva a revisarlos');
+}
+
+return todo_correcto;
+}
+
   function calcular(){
 select2 = document.getElementById("Pais");
 option2 = select2.options[select2.selectedIndex];
 select = document.getElementById("ocupacion");
 option = select.options[select.selectedIndex];
-//document.getElementById('Rank').value = option2.text;
 caja = document.forms["registro"].elements;
-//subtotal = Number(caja["subtotal"].value);
 if(option.text == "Docente" && option2.value == "PA"){
 subtotal= 175;
   dcto = 18/100;
@@ -442,7 +506,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
 </script>
 </head>
 
-<body onload="hish()">
+<body>
 <?php include("view/sechedyfoot/encabezado.php")?>
         
 <section style="background-position: center;
@@ -452,7 +516,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
 
 
 
-<form class="jotform-form" action="./?ops=registrar" method="post" name="registro" id="registro" accept-charset="utf-8" autocomplete="on" onload="hish1()">
+<form class="jotform-form" action="./?ops=registrar" method="post" name="registro" id="registro" accept-charset="utf-8" autocomplete="on" onsubmit="return validar()">
 <input type="hidden" name="formID" value="222833629063861" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -519,10 +583,10 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <div id="cid_82" class="form-input-wide">
           <select class="form-dropdown" id="ocupacion" name="ocupacion" style="width:20px" data-component="dropdown" onChange="calcular()" required>
             <option value=" " >Escoja su Posición</option>
-        <option value="0" >Estudiante</option>
-        <option value="1" >Investigador</option>
-        <option value="2" >Autor</option>
-        <option value="3" >Docente</option>
+        <option value="Estudiante" >Estudiante</option>
+        <option value="Investigador" >Investigador</option>
+        <option value="Autor" >Autor</option>
+        <option value="Docente" >Docente</option>
           </select>
         </div>
       </li>
@@ -549,7 +613,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
           </span>
         </label>
         <div id="cid_49" class="form-input-wide jf-required">
-          <input type="text"  id="cedula" name="cedula" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="39" value="" placeholder="Ejemplo: 000-0000-00000(E20-0899-00979)" data-component="textbox" aria-labelledby="label_54" minlength="8" maxlength="11" required>
+          <input type="text"  id="cedula" name="cedula" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="39" value="" placeholder="Ejemplo: 000-0000-00000(E20-0899-00979)" data-component="textbox" aria-labelledby="label_54" minlength="8" maxlength="13" pattern="[0-9]{2}-[0-9]{4}-[0-9]{5}" required>
         </div>
       </li>
       <li class="form-line form-line-column form-col-4" data-type="control_textbox" id="CIE" hidden>
@@ -892,11 +956,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <div id="cid_48" class="form-input-wide jf-required">
           <select class="form-dropdown validate[required]" name="sexo" id="sexo" style="width:500px" data-component="dropdown" >
             <option value=" " >Escoja su Sexo</option>
-        <option value="0" >Masculino</option>
-        <option value="1" >Femenino</option>
-        <option value="2" >Transformer</option>
-        <option value="3" >Helicoptero Apache</option>
-        <option value="4" >Otros</option>
+        <option value="Masculino" >Masculino</option>
+        <option value="Femenino" >Femenino</option>
+        <option value="Transformer" >Transformer</option>
+        <option value="Helicoptero Apache" >Helicoptero Apache</option>
+        <option value="Otros" >Otros</option>
           </select>
         </div>
       </li>
@@ -967,7 +1031,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <label class="form-label form-label-top" id="label_53" for="input_53_full"> Telefono</label>
         <div id="cid_53" class="form-input-wide">
           <span class="form-sub-label-container" style="vertical-align:top">
-            <input type="tel" id="telefono" name="telefono" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" placeholder="Ejemplo: 507-6789-6789" data-defaultvalue="" autoComplete="section-input_53 tel-national" data-masked="true" value="" data-component="phone" aria-labelledby="label_53" />
+            <input type="tel" id="telefono" name="telefono" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" placeholder="Ejemplo: 507-6789-6789" data-defaultvalue="" autoComplete="section-input_53 tel-national" data-masked="true" value="" data-component="phone" aria-labelledby="label_53" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"/>
             <label class="form-sub-label" for="input_53_full" id="sublabel_53_masked" style="min-height:13px" aria-hidden="false">  </label>
           </span>
         </div>
@@ -993,15 +1057,15 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"formatoDe","qid":"1","text":"Format
         <div id="cid_84" class="form-input-wide">
           <div class="divider" aria-label="Divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px">
           </div>
-          <button type="reset" value="Limpiar" onClick="toggleHidden5()" id="borr">Limpiar</button><p style="background-color=whitesmoke;" class="<?php if (isset ($_GET['msg'])) echo $_GET['t'];?>"> <?php if (isset ($_GET['msg'])) echo $_GET['msg'];?> </p> 
+          <button type="reset" value="Limpiar" onClick="toggleHidden5()" id="borr">Limpiar</button>
         </div>
       </li>
         <li class="form-line" data-type="control_button" id="id_83">
           <div id="cid_83" class="form-input-wide">
             <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-              <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="button"><a href="./" class="ml-2" style="text-decoration: none">Volver</a></button>
-            <button class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="submit" ><a class="ml-2" style="text-decoration: none">Inscribir</a></button>
-            </div>
+              <button class="" type="button"><a href="./" class="ml-2" style="text-decoration: none">Volver</a></button>
+            <button class="" type="submit" onClick="validar()"><a href="#"class="ml-2" style="text-decoration: none">Inscribir</a></button>
+            </div><!--   ./?ops=RPago   -->
           </div>
         </li>
         <li style="clear:both">

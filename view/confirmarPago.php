@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,16 +15,52 @@
 <?php include("view/sechedyfoot/encabezado.php")?>
 <div class="hero" style="background-image: url('public/images/1.jpg');">
     <div align="center" class="txtc">
- <form class="revision">        
-        <h1> Nombre : Diego </h1>
-        <h1> Apellido : Moreles </h1>
-        <h1> Cedula : 8-123-5124 </h1>
-        <h1> Pais : Panama </h1>
-        <h1> Provincia : Panama </h1>
-        <h1> Correo : diegomrales@outlook.com </h1>
-        <h1> telefono : 224-3128 </h1>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="ComprobarClave()" value="Aceptar" >Confirmar</button>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="ComprobarClave()" value="Aceptar" >Editar Informacion</button>
+ <form class="revision" action="./?ops=email">        
+        <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Usuarios Registrados</h3>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">#</th>
+                                            <th class="border-top-0">Nombre</th>
+                                            <th class="border-top-0">Apellido</th>
+                                            <th class="border-top-0">Email</th>
+                                            <th class="border-top-0">Titulo</th>
+                                            <th class="border-top-0">Cedula</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    $n=1;
+                                    foreach ($listaUsuario as $lista) {
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $n; ?></td>
+                                            <td class="txt-oflo"><?php echo $lista->nombre; ?></td>
+                                            <td class="txt-oflo"><?php echo $lista->apellidoP; ?></td>
+                                            <td class="txt-oflo"><?php echo $lista->email; ?></td>
+                                            <td class="txt-oflo"><?php echo $lista->ocupacion; ?></td>
+                                            <td class="txt-oflo"><?php echo $lista->cedula; ?></td>
+                                            <td><span class="text-success"><?php ?></span></td>
+                                        </tr>
+                                    <?php
+                                        $n++;
+                                    }
+                                    ?> 
+                                    </tbody>
+                                </table>
+                                <input type="text" class="form-control" id="correo" name="correo" placeholder="Inserte el correo para confirmar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Confirmar</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button" >Editar Informacion</button>
     </div>
  </form>  
 </div>
