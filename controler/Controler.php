@@ -4,11 +4,14 @@ session_start();// Comienzo de la sesión
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
 require 'public/phpmailer/src/Exception.php';
 require 'public/phpmailer/src/PHPMailer.php';
 require 'public/phpmailer/src/SMTP.php';
+
 require_once 'config/config.php';
 require_once 'model/usuario.php';
+
 class controlador{
     private $model;
     private $model4;
@@ -88,10 +91,6 @@ class controlador{
 
         require("view/panel/dashboard.php");
 
-    } public function RestablecerPass(){
-
-        require("view/restablecer.php");
-
     }
 
     /*public function IngresarPerfil(){
@@ -152,14 +151,15 @@ class controlador{
         }
     }
 
-    public function Correo(){
+    public function CambiarPass(){
+        
         
         $consultarEmail = new Usuario();
-        if ($consultarEmail = $this->model5->ConsultarEmail($_REQUEST['correo']))
-        {
+        if ($consultarEmail = $this->model5->ConsultarEmail($_REQUEST['email']))
+        { 
             $restablecer = new Usuario();
             echo $restablecer->restablecer = md5(rand(1,1000));
-            echo $restablecer->email = $_REQUEST['correo'];
+            echo $restablecer->email = $_REQUEST['email'];
             $this->resp= $this->model6->IncluirHash($restablecer);
             //Enviar email
             $mail = new PHPMailer(true);
@@ -173,35 +173,35 @@ class controlador{
             $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom(constant('CORREO_REMITENTE'), 'DS 7 FISC');
-            $mail->addAddress($restablecer->email); 
+            $mail->setFrom(constant('CORREO_REMITENTE'), 'DS 7 CongresoUTP2024');
+            $mail->addAddress($restablecer->email);
+            //$_REQUEST['err']=$restablecer->email;
             //plantilla HTML
 
             $mensajeHTML='
                 <p align="center"> 
-                <img src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" width="100px" height="100px" >
+                <img src="https://stickerly.pstatic.net/sticker_pack/NmQSNhRamKkvnkS2ND3Y9Q/15EBA7/5/ffa32e8d-422d-487f-bc6c-462979099369.png" width="100px" height="100px" >
                 </p>
-                <p align="center">Correo para restablecer su contrase&ntilde;a </p>
-                <p align="center"><b>Acceda al siguiente enlace: </b></p>
-                <p align="center">
-                <a href="http://localhost/login12/?op=rest&e='.$restablecer->email.'&h='.$restablecer->restablecer.'">CAMBIAR</a><br />
+                <p align="center">Correo para Confirmacion de Inscripcion del CongresoUTP2024</p>
+                <p align="center"><b>Acceda al siguiente enlace QR para acceder a nuestra App de orientacion para el congreso: </b></p>
+                <p align="center">CHUPALA JUSTIN!!
+                <a href="http://localhost/login12/?ops=index">IR</a><br />
                 </p>';
 
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'DS7-Restablecer Password';
+            $mail->Subject = 'DS7-Inscripcion al CogresoUTP2024';
             $mail->Body    = $mensajeHTML;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-            echo '<meta http-equiv="refresh" content="0;url=?ops=restablecer&msg=Se ha enviado un correo electrónico para restablecer la contraseña&t=text-success">';
-            //header('Location:?op=restablecer&msg=Se ha enviado un correo electrónico para restablecer la contraseña&t=text-success');
+            echo '<meta http-equiv="refresh" content="0;url=?ops=pagoexito&msg=Se ha enviado un correo electrónico para restablecer la contraseña&t=text-success">';
+            //header('Location:?ops=pagoexito&msg=Se ha enviado un correo electrónico para acceder a la app movil&t=text-success');
         }
         else{
-            header('Location:?ops=restablecer&msg=El Email no está registrado, deberá crear una cuenta&t=text-danger');
+            header('Location:?ops=pagoexito&msg=El Email no está registrado, deberá crear una cuenta&t=text-danger');
         }
-
     }
 
 

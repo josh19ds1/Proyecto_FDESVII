@@ -15,7 +15,7 @@
 <?php include("view/sechedyfoot/encabezado.php")?>
 <div class="hero" style="background-image: url('public/images/1.jpg');">
     <div align="center" class="txtc">
- <form class="revision" action="./?ops=email">        
+ <form class="revision" action="./?ops=verificaremail" method="POST">        
         <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
@@ -54,13 +54,14 @@
                                     ?> 
                                     </tbody>
                                 </table>
-                                <input type="text" class="form-control" id="correo" name="correo" placeholder="Inserte el correo para confirmar">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Inserte el correo nuevamente para confirmar">
+                                <p class="<?php if (isset ($_GET['msg'])) echo $_GET['t'];?>"> <?php if (isset ($_GET['msg'])) echo $_GET['msg'];?> </p> 
                             </div>
                         </div>
                     </div>
                 </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" >Confirmar</button>
-        <button class="btn btn-lg btn-primary btn-block" type="button" >Editar Informacion</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="history.go(-1)">Editar Informacion</button>
     </div>
  </form>  
 </div>

@@ -22,7 +22,7 @@
   <body class="text-center">
     
 <main class="form-signin w-100 m-auto">
-  <form method="POST" action="./?op=verificaremail" >
+  <form method="POST" action="./?op=email" >
     <img class="mb-4" src="public/images/utp.svg" alt="" width="125" height="125">
     <h1 class="h3 mb-3 fw-normal">Restablecer Contraseña</h1>
 

@@ -100,7 +100,7 @@
 			</div>
 			
       <button class="btn-enviar" type="button" value="Aceptar" ><a href="?ops=pagoexito" style="color:white;">Enviar</a></button>
-	  <button class="btn btn-lg btn-primary btn-block" type="button"><a href="./" class="ml-2" style="color:white;">Volver</a></button>
+	  <button class="btn btn-lg btn-primary btn-block" type="button"><a href="./" onclick="history.go()" class="ml-2" style="color:white;">Volver</a></button>
 		</form>
 	</div>
 

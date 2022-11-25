@@ -23,6 +23,7 @@ class Usuario
 	public $pais;
 	public $provincia;
 	public $distrito;
+	public $restablecer;
 
 
 	public function __CONSTRUCT()
@@ -80,6 +81,18 @@ class Usuario
 	}
 
 	public function Consultar(usuario $data)
+	{
+		try
+		{
+			$stm = $this->pdo->prepare("SELECT * FROM coladm WHERE email = ? AND pass=?");
+			$stm->execute(array($data->email, $data->pass));
+			return $stm->fetch(PDO::FETCH_OBJ);
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
+	public function ConsultarC(usuario $data)
 	{
 		try
 		{

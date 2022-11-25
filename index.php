@@ -51,26 +51,20 @@ if (isset($_GET['ops'])){
     
         $control->IngresarPanel();
     }
-    elseif ($opcion=="perfil11"){
-
-        //Llamo al método ver pasándole la clave que me están pidiendo
-    
-        $control->IngresarPerfil();
-    }
     elseif ($opcion=="salir"){
 
         //Llamo al método ver pasándole la clave que me están pidiendo
         session_destroy();
-        $control->Index();
+        $control->index();
     }elseif ($opcion=="restablecer"){
 
         //Llamo al método para ver la vista de restablecer la contraseña
         $control->RestablecerPass();
     }
-    elseif ($opcion=="email"){
+    elseif ($opcion=="verificaremail"){
 
         //Llamo al método para ver la vista de restablecer la contraseña
-        $control->Correo();
+        $control->CambiarPass();
     }
     
     elseif($opcion=="Cronograma"){

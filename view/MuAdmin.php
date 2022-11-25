@@ -32,7 +32,7 @@
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
-    <input class="w-100 btn btn-lg btn-primary" type="button" value="Atras" onclick="history.go(-1)">
+    <input class="w-100 btn btn-lg btn-primary" type="button" value="Atras" onclick="history.go()">
     <div class="mt-4">
     <div class="d-flex justify-content-center links">
     ¿Aún no tiene cuenta? - <a href="?op=crear" class="ml-2"> Regístrese aquí </a>
